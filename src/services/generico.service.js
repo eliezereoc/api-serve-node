@@ -100,7 +100,11 @@ async function auth(req, res, next) {
   if (!token_header) return res.status(400).send({ erro: "Informe um Token válido!" });
 
   // Remover o prefixo 'Bearer ' do token
-  const token = token_header.split(" ")[1];
+  // const token = token_header.split(" ")[1];
+
+  // Verificar se o token tem o prefixo 'Bearer'
+  const token = token_header.startsWith("Bearer ") ? token_header.split(" ")[1] : token_header;
+
 
   jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
     if (err) return res.status(401).send({ erro: "Informe um Token válido!" });

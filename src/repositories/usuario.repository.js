@@ -3,11 +3,9 @@ import genericoService from "../services/generico.service.js";
 
 async function createUsuario(usuario) {
   try {
-    //console.log(usuario);
     const conn = await connect();
     let sql = "select 1 from usuarios where usuario = ?";
     let [linhas] = await conn.query(sql, [usuario.usuario]);
-    //console.log(linhas);
 
     // verifica se foi retornado algum usuário com aquele nome
     if (linhas.length === 0) {
@@ -15,7 +13,6 @@ async function createUsuario(usuario) {
         "insert into usuarios ( idnivel, usuario, nome, senha, email, telefone, funcao, setor, foto ) " +
         "values ( ?, ?, ?, ?, ?, ?, ?, ?, ? ) ";
 
-      //console.log(usuario);
       const values = [
         usuario.idnivel,
         usuario.usuario,
@@ -74,7 +71,7 @@ async function getUsuarios() {
 
     // Remove a senha do resultado
     linhas.forEach((usuario) => delete usuario.senha);
-        
+
     return linhas;
   } catch (error) {
     throw error;
@@ -84,16 +81,10 @@ async function getUsuarios() {
 async function getUsuario(id) {
   const conn = await connect();
   try {
-    const [linhas] = await conn.query("SELECT * FROM usuario WHERE id = ?", [
-      id,
-    ]);
+    const [linhas] = await conn.query("SELECT * FROM usuario WHERE id = ?", [id]);
 
     // Remove a senha do resultado
-    linhas.forEach((usuario) => {
-      console.log(usuario);
-
-      delete usuario.senha;
-    });
+    linhas.forEach((usuario) => delete usuario.senha);    
 
     return linhas;
   } catch (error) {
@@ -105,7 +96,7 @@ async function getUsuarioAuth(usuario) {
   const conn = await connect();
   try {
     const [linhas] = await conn.query(
-      "SELECT * FROM usuario WHERE usuario = ? LIMIT 1",
+      "SELECT * FROM usuario WHERE email = ? LIMIT 1",
       [usuario.usuario]
     );
 

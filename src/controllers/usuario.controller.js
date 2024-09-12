@@ -40,14 +40,15 @@ async function getUsuarios(req, res, next) {
 async function getUsuario(req, res, next) {
   try {
     const id = req.params.id;
-
     const usuario = await UsuarioService.getUsuario(id);
-    if (usuario) {
-      res.send(usuario);
-    } else {
-      res.send("Usuario não encontrado!");
+
+    if (usuario.length > 0) {
+      logger.info(`GET /usuario: ${JSON.stringify(usuario)}`);
+      return res.status(200).send(usuario);
     }
-    logger.info("GET /usuario");
+
+    logger.info(`GET /usuario - ID: ${id} não encontrado`);
+    return res.status(404).send({ message: "Registro não encontrado!" });
   } catch (err) {
     next(err);
   }
