@@ -1,5 +1,5 @@
 import connect from "./db.js";
-import genericoService from "../services/generico.service.js";
+import genericoService from "../services/auth.service.js";
 
 async function createUsuario(usuario) {
   try {

@@ -1,5 +1,5 @@
 import usuarioService from "../services/usuario.service.js";
-import genericoService from "../services/generico.service.js";
+import genericoService from "../services/auth.service.js";
 
 async function verificaUsuario(req, res, next) {
   try {  
