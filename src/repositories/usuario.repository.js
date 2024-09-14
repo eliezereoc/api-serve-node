@@ -98,15 +98,18 @@ async function deleteUsuario(id) {
         status: "erro",
         message: "Registro não encontrado!",
       };
-    } else { 
-      return {
-        status: "sucesso",
-        message: "Registro removido com sucesso!", 
-        id: id        
-      };
-    }   
+    }
+    return {
+      status: "sucesso",
+      message: "Registro removido com sucesso!",
+      id: id,
+    };
   } catch (error) {
-    throw error;
+    throw {
+      status: 500,
+      message: "Erro ao acessar o banco de dados.",
+      error: error.message,
+    };
   }
 }
 

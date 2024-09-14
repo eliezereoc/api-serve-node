@@ -57,17 +57,12 @@ async function deleteUsuario(req, res, next) {
     const authenticatedUserId = req.user.id; // ID do usuário autenticado no token
     
     if (!id) throw new Error("ID é obrigatório!");
-
-    if (id == authenticatedUserId) {
-      logger.warn(`DELETE /usuario - Você não pode excluir sua própria conta.`); 
-      return res.status(403).json({ message: 'Você não pode excluir sua própria conta.' });
-    }
   
-    const result = await UsuarioService.deleteUsuario(id);
+    const result = await UsuarioService.deleteUsuario(id, authenticatedUserId);
 
     if (result.status === "erro") {
-      logger.warn(`DELETE /usuario - ${JSON.stringify(result)}`); 
-      return res.status(404).send(result);
+      logger.warn(`DELETE /usuario - ${JSON.stringify(result)}`);
+      return res.status(result.code || 500).send(result);
     }
 
     logger.info(`DELETE /usuario - ${JSON.stringify(result)}`); 

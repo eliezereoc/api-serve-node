@@ -261,3 +261,11 @@
 2024-09-14T03:40:17.607Z [log_api] info GET /usuarios - [{"id":1,"nome":"eliezer","email":"eliezeroc@gmail.com","active":"S","data_criacao":"2024-09-12T03:00:00.000Z","data_alteracao":"2024-09-13T00:37:39.000Z"},{"id":10,"nome":"João","email":"joao@joao.com","active":null,"data_criacao":"2024-09-14T03:00:00.000Z","data_alteracao":"2024-09-14T03:36:03.000Z"},{"id":11,"nome":"João","email":"joao@joao.com1","active":null,"data_criacao":"2024-09-14T03:00:00.000Z","data_alteracao":"2024-09-14T03:36:34.000Z"}]
 2024-09-14T03:40:27.081Z [log_api] info DELETE /usuario - {"status":"sucesso","message":"Registro removido com sucesso!","id":"11"}
 2024-09-14T03:40:33.846Z [log_api] warn DELETE /usuario - Você não pode excluir sua própria conta.
+2024-09-14T03:55:23.446Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T03:55:23.466Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T03:55:44.759Z [log_api] warn DELETE /usuario - Você não pode excluir sua própria conta.
+2024-09-14T03:55:44.760Z [log_api] warn DELETE /usuario - {"status":"erro","code":403,"message":"Você não pode excluir sua própria conta."}
+2024-09-14T03:55:58.219Z [log_api] info GET /usuarios - [{"id":1,"nome":"eliezer","email":"eliezeroc@gmail.com","active":"S","data_criacao":"2024-09-12T03:00:00.000Z","data_alteracao":"2024-09-13T00:37:39.000Z"},{"id":10,"nome":"João","email":"joao@joao.com","active":null,"data_criacao":"2024-09-14T03:00:00.000Z","data_alteracao":"2024-09-14T03:36:03.000Z"}]
+2024-09-14T03:56:06.621Z [log_api] info DELETE /usuario - {"status":"sucesso","message":"Usuário excluído com sucesso."}
+2024-09-14T03:57:03.884Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T03:57:03.904Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
