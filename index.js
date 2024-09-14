@@ -20,6 +20,9 @@ global.logger = winston.createLogger({
     new winston.transports.Console(),
     new winston.transports.File({
       filename: process.env.DIR_FILE_LOG,
+      datePattern: 'YYYY-MM-DD',  // Padrão da data no nome do arquivo
+      zippedArchive: true,        // Compacta os arquivos antigos
+      maxSize: '20m',             // Tamanho máximo por arquivo
     }),
   ],
   format: combine(

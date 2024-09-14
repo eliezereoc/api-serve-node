@@ -2,25 +2,22 @@ import UsuarioService from "../services/usuario.service.js";
 
 async function createUsuario(req, res, next) {
   try {
-    let usuario = req.body;
-    if (
-      !usuario.nome ||
-      !usuario.usuario ||
-      !usuario.email ||
-      !usuario.telefone ||
-      !usuario.funcao ||
-      !usuario.setor ||
-      !usuario.senha ||
-      !usuario.idnivel ||
-      !usuario.foto
-    ) {
-      throw new Error("Todos os campos são obrigatórios!");
+    const usuario = req.body;
+    if (!usuario.nome || !usuario.email || !usuario.senha || !usuario.active)
+      throw new Error(
+        `POST/usuarios - Todos os campos são obrigatórios - ${JSON.stringify(
+          usuario
+        )}`
+      );
+
+    const novo_usuario = await UsuarioService.createUsuario(usuario);
+
+    if (novo_usuario.status === "erro") {
+      logger.warn(`POST /usuario - ${JSON.stringify(novo_usuario)}`);
+      return res.status(409).send(novo_usuario);
     }
-
-    usuario = await UsuarioService.createUsuario(usuario);
-    res.send(usuario);
-
-    //logger.info(`POST /usuario - ${JSON.stringify(usuario)}`);
+    logger.info(`POST /usuario - ${JSON.stringify(novo_usuario)}`);
+    return res.status(200).send(novo_usuario);
   } catch (err) {
     next(err);
   }
@@ -47,7 +44,7 @@ async function getUsuario(req, res, next) {
       return res.status(200).send(usuario);
     }
 
-    logger.info(`GET /usuario - ID: ${id} não encontrado`);
+    logger.warn(`GET /usuario - ID: ${id} não encontrado`);
     return res.status(404).send({ message: "Registro não encontrado!" });
   } catch (err) {
     next(err);
@@ -55,12 +52,26 @@ async function getUsuario(req, res, next) {
 }
 
 async function deleteUsuario(req, res, next) {
-  try {
-    const id = req.params.id;
+  try {    
+    const {id} = req.params;
+    const authenticatedUserId = req.user.id; // ID do usuário autenticado no token
+    
+    if (!id) throw new Error("ID é obrigatório!");
 
-    const retorno = await UsuarioService.deleteUsuario(id);
-    res.send(retorno);
-    logger.info("DELETE /usuario");
+    if (id == authenticatedUserId) {
+      logger.warn(`DELETE /usuario - Você não pode excluir sua própria conta.`); 
+      return res.status(403).json({ message: 'Você não pode excluir sua própria conta.' });
+    }
+  
+    const result = await UsuarioService.deleteUsuario(id);
+
+    if (result.status === "erro") {
+      logger.warn(`DELETE /usuario - ${JSON.stringify(result)}`); 
+      return res.status(404).send(result);
+    }
+
+    logger.info(`DELETE /usuario - ${JSON.stringify(result)}`); 
+    return res.status(200).send(result);
   } catch (err) {
     next(err);
   }

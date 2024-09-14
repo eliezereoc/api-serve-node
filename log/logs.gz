@@ -1,0 +1,263 @@
+2024-09-14T01:25:50.123Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T01:25:50.142Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T01:26:19.356Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T01:26:19.375Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T01:27:03.135Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T01:27:03.153Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T01:28:18.703Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T01:28:18.728Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T01:32:17.406Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T01:32:17.428Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T01:36:43.792Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T01:36:43.812Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T01:38:10.697Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T01:38:10.713Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T01:38:18.028Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T01:38:18.967Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T01:38:18.987Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T01:39:49.359Z [log_api] error POST  - Todos os campos são obrigatórios!
+2024-09-14T01:40:46.719Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T01:40:46.742Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T01:42:28.682Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T01:42:28.703Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T01:42:33.254Z [log_api] error POST  - Table 'db_api_dev.usuarios' doesn't exist
+2024-09-14T01:43:55.352Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T01:43:55.371Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T01:46:23.011Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T01:46:23.033Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T01:46:33.977Z [log_api] info POST/usuarios - Todos os campos são obrigatórios! - {"nome":"João","email":"joao@joao.com","senha":"senha123"}
+2024-09-14T01:46:33.978Z [log_api] error POST  - Todos os campos são obrigatórios!
+2024-09-14T01:48:26.455Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T01:48:26.478Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T01:48:29.081Z [log_api] error POST  - POST/usuarios - Todos os campos são obrigatórios - {"nome":"João","email":"joao@joao.com","senha":"senha123"}
+2024-09-14T01:49:31.076Z [log_api] error POST  - Table 'db_api_dev.usuarios' doesn't exist
+2024-09-14T01:49:48.931Z [log_api] error POST  - Table 'db_api_dev.usuarios' doesn't exist
+2024-09-14T01:50:08.066Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T01:50:08.087Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T01:50:09.444Z [log_api] error POST  - Table 'db_api_dev.usuarios' doesn't exist
+2024-09-14T01:50:41.345Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T01:50:41.367Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T01:50:42.569Z [log_api] error POST  - Table 'db_api_dev.usuarios' doesn't exist
+2024-09-14T01:56:28.770Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T01:56:28.789Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T01:56:52.888Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T01:56:52.908Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T01:56:53.385Z [log_api] error POST  - Table 'db_api_dev.usuarios' doesn't exist
+2024-09-14T01:57:53.960Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T01:57:53.979Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T01:57:56.751Z [log_api] error POST  - Table 'db_api_dev.usuarios' doesn't exist
+2024-09-14T01:58:19.798Z [log_api] info GET /usuarios - [{"id":1,"nome":"eliezer","email":"eliezeroc@gmail.com","active":"S","data_criacao":"2024-09-12T03:00:00.000Z","data_alteracao":"2024-09-13T00:37:39.000Z"}]
+2024-09-14T01:58:35.398Z [log_api] error POST  - genericoService.retornoInsert is not a function
+2024-09-14T01:59:16.983Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T01:59:17.001Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:00:38.017Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:00:38.037Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:00:58.808Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:00:58.828Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:01:52.651Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:01:52.670Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:02:41.978Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:02:42.001Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:02:45.216Z [log_api] error POST  - genericoService.retornoInsert is not a function
+2024-09-14T02:05:29.252Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:05:29.271Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:05:30.949Z [log_api] error POST  - novo_usuario is not defined
+2024-09-14T02:05:49.583Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:05:49.603Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:08:51.507Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:08:51.528Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:08:56.332Z [log_api] info POST /usuario - {"status":"erro","message":"Usuário já cadastrado!"}
+2024-09-14T02:09:11.726Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:09:11.745Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:09:13.154Z [log_api] info POST /usuario - {"status":"erro","message":"Usuário já cadastrado!"}
+2024-09-14T02:10:20.984Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:10:21.003Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:10:54.392Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:10:54.410Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:11:47.237Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:11:47.267Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:11:48.517Z [log_api] error POST  - Cannot read properties of undefined (reading 'status')
+2024-09-14T02:12:00.296Z [log_api] info GET /usuarios - [{"id":1,"nome":"eliezer","email":"eliezeroc@gmail.com","active":"S","data_criacao":"2024-09-12T03:00:00.000Z","data_alteracao":"2024-09-13T00:37:39.000Z"},{"id":3,"nome":"João","email":"joao@joao.com","active":"1","data_criacao":"2024-09-13T03:00:00.000Z","data_alteracao":"2024-09-14T02:11:48.000Z"}]
+2024-09-14T02:14:15.369Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:14:15.389Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:14:16.829Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:14:16.848Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:14:34.248Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:14:34.267Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:14:54.010Z [log_api] info POST /usuario - {"status":"erro","message":"Usuário já cadastrado!"}
+2024-09-14T02:15:05.477Z [log_api] info POST /usuario - {"status":"sucesso","message":"Usuário cadastrado com sucesso!","usuario":{"fieldCount":0,"affectedRows":1,"insertId":4,"info":"","serverStatus":2,"warningStatus":0,"changedRows":0}}
+2024-09-14T02:16:23.272Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:16:23.293Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:16:28.333Z [log_api] info POST /usuario - {"status":"sucesso","message":"Usuário cadastrado com sucesso!","id":5}
+2024-09-14T02:16:36.909Z [log_api] info GET /usuarios - [{"id":1,"nome":"eliezer","email":"eliezeroc@gmail.com","active":"S","data_criacao":"2024-09-12T03:00:00.000Z","data_alteracao":"2024-09-13T00:37:39.000Z"},{"id":3,"nome":"João","email":"joao@joao.com","active":"1","data_criacao":"2024-09-13T03:00:00.000Z","data_alteracao":"2024-09-14T02:11:48.000Z"},{"id":4,"nome":"João","email":"joao@joao.com1","active":"1","data_criacao":"2024-09-13T03:00:00.000Z","data_alteracao":"2024-09-14T02:15:05.000Z"},{"id":5,"nome":"João","email":"joao@joao.com2","active":"1","data_criacao":"2024-09-13T03:00:00.000Z","data_alteracao":"2024-09-14T02:16:28.000Z"}]
+2024-09-14T02:19:19.307Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:19:19.327Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:19:27.663Z [log_api] info POST /usuario - {"status":"sucesso","message":"Usuário cadastrado com sucesso!","id":6}
+2024-09-14T02:19:33.646Z [log_api] error GET  - Can't add new command when connection is in closed state
+2024-09-14T02:19:46.741Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:19:46.761Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:19:51.123Z [log_api] info GET /usuarios - [{"id":1,"nome":"eliezer","email":"eliezeroc@gmail.com","active":"S","data_criacao":"2024-09-12T03:00:00.000Z","data_alteracao":"2024-09-13T00:37:39.000Z"},{"id":3,"nome":"João","email":"joao@joao.com","active":"1","data_criacao":"2024-09-13T03:00:00.000Z","data_alteracao":"2024-09-14T02:11:48.000Z"},{"id":4,"nome":"João","email":"joao@joao.com1","active":"1","data_criacao":"2024-09-13T03:00:00.000Z","data_alteracao":"2024-09-14T02:15:05.000Z"},{"id":5,"nome":"João","email":"joao@joao.com2","active":"1","data_criacao":"2024-09-13T03:00:00.000Z","data_alteracao":"2024-09-14T02:16:28.000Z"},{"id":6,"nome":"João","email":"joao@joao.com3","active":"1","data_criacao":"2024-09-13T03:00:00.000Z","data_alteracao":"2024-09-14T02:19:27.000Z"}]
+2024-09-14T02:20:40.909Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:20:40.929Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:20:56.769Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:20:56.788Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:21:13.772Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:21:13.793Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:22:33.722Z [log_api] info POST /usuario - {"status":"sucesso","message":"Usuário cadastrado com sucesso!","id":7}
+2024-09-14T02:26:08.857Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:26:08.879Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:27:03.559Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:27:03.579Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:27:42.492Z [log_api] info POST /usuario - {"status":"erro","message":"Usuário já cadastrado!"}
+2024-09-14T02:28:05.229Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:28:05.254Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:28:52.306Z [log_api] info POST /usuario - {"status":"erro","message":"Usuário já cadastrado!"}
+2024-09-14T02:29:23.522Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:29:23.546Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:30:35.477Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:30:35.495Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:32:47.883Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:32:47.901Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:33:30.263Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:33:30.280Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:33:48.147Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:33:48.168Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:34:10.927Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:34:10.947Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:36:33.428Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:36:33.449Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:38:44.494Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:38:44.513Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:40:15.967Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:40:15.989Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:40:32.563Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:40:32.582Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:40:46.447Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:40:46.471Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:41:46.921Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:41:46.942Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:42:12.194Z [log_api] info DELETE /usuario
+2024-09-14T02:44:28.419Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:44:28.438Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:45:08.354Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:45:08.374Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:45:55.574Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:45:55.594Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:46:07.428Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:46:07.446Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:46:13.810Z [log_api] info DELETE /usuario
+2024-09-14T02:46:36.486Z [log_api] info DELETE /usuario
+2024-09-14T02:46:55.282Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:46:55.301Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:46:56.662Z [log_api] info DELETE /usuario
+2024-09-14T02:48:47.435Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:48:47.587Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:49:57.948Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:49:57.967Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:49:58.662Z [log_api] info DELETE /usuario - {"status":"erro","message":"Registro não encontrado!"}
+2024-09-14T02:51:17.795Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:51:17.819Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:51:25.025Z [log_api] info DELETE /usuario - {"status":"sucesso","message":"Registro removido com sucesso!","id":"5"}
+2024-09-14T02:51:44.675Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:51:44.694Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:51:49.989Z [log_api] info DELETE /usuario - {"status":"sucesso","message":"Registro removido com sucesso!","id":"4"}
+2024-09-14T02:52:06.563Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:52:06.586Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:52:57.394Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:52:57.412Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:54:33.244Z [log_api] info DELETE /usuario - {"status":"erro","message":"Registro não encontrado!"}
+2024-09-14T02:56:46.431Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:56:46.449Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:57:24.092Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:57:24.114Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T02:59:05.674Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T02:59:05.693Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T03:00:31.230Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T03:00:31.247Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T03:02:31.394Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T03:02:31.413Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T03:02:52.090Z [log_api] info DELETE /usuario - {"status":"sucesso","message":"Registro removido com sucesso!","id":"3"}
+2024-09-14T03:03:45.802Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T03:03:45.823Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T03:04:43.890Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T03:04:43.910Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T03:05:12.610Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T03:05:12.628Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T03:06:52.314Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T03:06:52.333Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T03:07:53.476Z [log_api] info DELETE /usuario - {"status":"erro","message":"Registro não encontrado!"}
+2024-09-14T03:08:01.895Z [log_api] info DELETE /usuario - {"status":"erro","message":"Registro não encontrado!"}
+2024-09-14T03:08:31.309Z [log_api] info DELETE /usuario - {"status":"erro","message":"Registro não encontrado!"}
+2024-09-14T03:08:38.608Z [log_api] info DELETE /usuario - {"status":"erro","message":"Registro não encontrado!"}
+2024-09-14T03:08:53.596Z [log_api] info POST /usuario - {"status":"sucesso","message":"Usuário cadastrado com sucesso!","id":8}
+2024-09-14T03:08:57.338Z [log_api] info POST /usuario - {"status":"erro","message":"Usuário já cadastrado!"}
+2024-09-14T03:09:03.900Z [log_api] info POST /usuario - {"status":"sucesso","message":"Usuário cadastrado com sucesso!","id":9}
+2024-09-14T03:09:21.281Z [log_api] info GET /usuarios - [{"id":1,"nome":"eliezer","email":"eliezeroc@gmail.com","active":"S","data_criacao":"2024-09-12T03:00:00.000Z","data_alteracao":"2024-09-13T00:37:39.000Z"},{"id":8,"nome":"João","email":"joao@joao.com","active":null,"data_criacao":"2024-09-14T03:00:00.000Z","data_alteracao":"2024-09-14T03:08:53.000Z"},{"id":9,"nome":"João","email":"joao@joao.com1","active":null,"data_criacao":"2024-09-14T03:00:00.000Z","data_alteracao":"2024-09-14T03:09:03.000Z"}]
+2024-09-14T03:09:29.643Z [log_api] info DELETE /usuario - {"status":"sucesso","message":"Registro removido com sucesso!","id":"8"}
+2024-09-14T03:09:35.558Z [log_api] info DELETE /usuario - {"status":"erro","message":"Registro não encontrado!"}
+2024-09-14T03:09:41.783Z [log_api] info DELETE /usuario - {"status":"sucesso","message":"Registro removido com sucesso!","id":"9"}
+2024-09-14T03:09:44.117Z [log_api] info DELETE /usuario - {"status":"erro","message":"Registro não encontrado!"}
+2024-09-14T03:10:18.773Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T03:10:18.793Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T03:10:21.838Z [log_api] info DELETE /usuario - {"status":"erro","message":"Registro não encontrado!"}
+2024-09-14T03:10:51.217Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T03:10:51.237Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T03:18:01.017Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T03:18:01.036Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T03:18:58.264Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T03:18:58.284Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T03:22:03.155Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T03:22:03.176Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T03:22:23.944Z [log_api] info GET /usuarios - [{"id":1,"nome":"eliezer","email":"eliezeroc@gmail.com","active":"S","data_criacao":"2024-09-12T03:00:00.000Z","data_alteracao":"2024-09-13T00:37:39.000Z"}]
+2024-09-14T03:23:13.202Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T03:23:13.222Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T03:23:18.106Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T03:23:18.129Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T03:23:20.962Z [log_api] info GET /usuarios - [{"id":1,"nome":"eliezer","email":"eliezeroc@gmail.com","active":"S","data_criacao":"2024-09-12T03:00:00.000Z","data_alteracao":"2024-09-13T00:37:39.000Z"}]
+2024-09-14T03:23:35.346Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T03:23:35.368Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T03:23:38.327Z [log_api] info GET /usuarios - [{"id":1,"nome":"eliezer","email":"eliezeroc@gmail.com","active":"S","data_criacao":"2024-09-12T03:00:00.000Z","data_alteracao":"2024-09-13T00:37:39.000Z"}]
+2024-09-14T03:23:58.244Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T03:23:58.265Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T03:23:59.840Z [log_api] info GET /usuarios - [{"id":1,"nome":"eliezer","email":"eliezeroc@gmail.com","active":"S","data_criacao":"2024-09-12T03:00:00.000Z","data_alteracao":"2024-09-13T00:37:39.000Z"}]
+2024-09-14T03:24:32.340Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T03:24:32.359Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T03:24:53.265Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T03:24:53.287Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T03:25:10.255Z [log_api] info DELETE /usuario - {"status":"erro","message":"Registro não encontrado!"}
+2024-09-14T03:26:09.668Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T03:26:09.690Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T03:26:20.390Z [log_api] info DELETE /usuario - {"status":"erro","message":"Registro não encontrado!"}
+2024-09-14T03:26:59.411Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T03:26:59.434Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T03:30:25.237Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T03:30:25.257Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T03:30:27.987Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T03:30:28.007Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T03:31:46.314Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T03:31:46.338Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T03:31:48.527Z [log_api] info DELETE /usuario - Você não pode excluir sua própria conta.
+2024-09-14T03:33:21.788Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T03:33:21.809Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T03:33:26.025Z [log_api] warn DELETE /usuario - Você não pode excluir sua própria conta.
+2024-09-14T03:34:35.969Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T03:34:35.989Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T03:34:47.785Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T03:34:47.821Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T03:35:07.731Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2024-09-14T03:35:07.752Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2024-09-14T03:35:45.668Z [log_api] info GET /usuarios - [{"id":1,"nome":"eliezer","email":"eliezeroc@gmail.com","active":"S","data_criacao":"2024-09-12T03:00:00.000Z","data_alteracao":"2024-09-13T00:37:39.000Z"}]
+2024-09-14T03:36:03.534Z [log_api] info POST /usuario - {"status":"sucesso","message":"Usuário cadastrado com sucesso!","id":10}
+2024-09-14T03:36:07.338Z [log_api] info GET /usuarios - [{"id":1,"nome":"eliezer","email":"eliezeroc@gmail.com","active":"S","data_criacao":"2024-09-12T03:00:00.000Z","data_alteracao":"2024-09-13T00:37:39.000Z"},{"id":10,"nome":"João","email":"joao@joao.com","active":null,"data_criacao":"2024-09-14T03:00:00.000Z","data_alteracao":"2024-09-14T03:36:03.000Z"}]
+2024-09-14T03:36:34.641Z [log_api] info POST /usuario - {"status":"sucesso","message":"Usuário cadastrado com sucesso!","id":11}
+2024-09-14T03:37:08.845Z [log_api] warn DELETE /usuario - Você não pode excluir sua própria conta.
+2024-09-14T03:37:16.854Z [log_api] info GET /usuarios - [{"id":1,"nome":"eliezer","email":"eliezeroc@gmail.com","active":"S","data_criacao":"2024-09-12T03:00:00.000Z","data_alteracao":"2024-09-13T00:37:39.000Z"},{"id":10,"nome":"João","email":"joao@joao.com","active":null,"data_criacao":"2024-09-14T03:00:00.000Z","data_alteracao":"2024-09-14T03:36:03.000Z"},{"id":11,"nome":"João","email":"joao@joao.com1","active":null,"data_criacao":"2024-09-14T03:00:00.000Z","data_alteracao":"2024-09-14T03:36:34.000Z"}]
+2024-09-14T03:37:29.132Z [log_api] info POST /usuario - {"status":"sucesso","message":"Usuário cadastrado com sucesso!","id":12}
+2024-09-14T03:37:33.502Z [log_api] info GET /usuarios - [{"id":1,"nome":"eliezer","email":"eliezeroc@gmail.com","active":"S","data_criacao":"2024-09-12T03:00:00.000Z","data_alteracao":"2024-09-13T00:37:39.000Z"},{"id":10,"nome":"João","email":"joao@joao.com","active":null,"data_criacao":"2024-09-14T03:00:00.000Z","data_alteracao":"2024-09-14T03:36:03.000Z"},{"id":11,"nome":"João","email":"joao@joao.com1","active":null,"data_criacao":"2024-09-14T03:00:00.000Z","data_alteracao":"2024-09-14T03:36:34.000Z"},{"id":12,"nome":"João","email":"joao@joao.com2","active":null,"data_criacao":"2024-09-14T03:00:00.000Z","data_alteracao":"2024-09-14T03:37:29.000Z"}]
+2024-09-14T03:37:46.223Z [log_api] info DELETE /usuario - {"status":"sucesso","message":"Registro removido com sucesso!","id":"12"}
+2024-09-14T03:38:46.690Z [log_api] error POST  - Expected double-quoted property name in JSON at position 48
+2024-09-14T03:39:40.281Z [log_api] error POST  - Expected double-quoted property name in JSON at position 55
+2024-09-14T03:40:10.822Z [log_api] warn DELETE /usuario - {"status":"erro","message":"Registro não encontrado!"}
+2024-09-14T03:40:17.607Z [log_api] info GET /usuarios - [{"id":1,"nome":"eliezer","email":"eliezeroc@gmail.com","active":"S","data_criacao":"2024-09-12T03:00:00.000Z","data_alteracao":"2024-09-13T00:37:39.000Z"},{"id":10,"nome":"João","email":"joao@joao.com","active":null,"data_criacao":"2024-09-14T03:00:00.000Z","data_alteracao":"2024-09-14T03:36:03.000Z"},{"id":11,"nome":"João","email":"joao@joao.com1","active":null,"data_criacao":"2024-09-14T03:00:00.000Z","data_alteracao":"2024-09-14T03:36:34.000Z"}]
+2024-09-14T03:40:27.081Z [log_api] info DELETE /usuario - {"status":"sucesso","message":"Registro removido com sucesso!","id":"11"}
+2024-09-14T03:40:33.846Z [log_api] warn DELETE /usuario - Você não pode excluir sua própria conta.

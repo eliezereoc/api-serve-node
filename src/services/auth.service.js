@@ -10,7 +10,7 @@ async function criarToken(user) {
     usuario: usuario.usuario,
     nome: usuario.nome,
     role: "", // Papel ou permissões do usuário
-    email: "", // Outras informações não sensíveis
+    email: usuario.email, // Outras informações não sensíveis
     // Outras informações que você pode querer incluir
   };
 
@@ -30,15 +30,12 @@ async function auth(req, res, next) {
 
   if (!token_header) return res.status(400).send({ erro: "Informe um Token válido!" });
 
-  // Remover o prefixo 'Bearer ' do token
-  // const token = token_header.split(" ")[1];
-
   // Verificar se o token tem o prefixo 'Bearer'
   const token = token_header.startsWith("Bearer ") ? token_header.split(" ")[1] : token_header;
 
-
-  jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
+  jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
     if (err) return res.status(401).send({ erro: "Informe um Token válido!" });
+    req.user = user; //armazena as informações do usuário autenticado   
     return next();
   });
 }
