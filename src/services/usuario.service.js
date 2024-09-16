@@ -26,12 +26,13 @@ async function deleteUsuario(id, authenticatedUserId) {
   try {
     const result = await UsuarioRepository.deleteUsuario(id);
 
-    if (result.affectedRows === 0) {
+    if (result.status == 'erro') {
       logger.warn(`DELETE /usuario - Usuário com ID ${id} não encontrado.`);
-      return { status: "erro", code: 404, message: 'Usuário não encontrado.' };
+      return { status: "erro", message: `Usuário com ID ${id} não encontrado.` };
     }
 
-    return { status: "sucesso", message: 'Usuário excluído com sucesso.' };
+    logger.info(`DELETE /usuario - Usuário com ID ${id} foi excluído com sucesso.`);
+    return { status: "sucesso", message: `DELETE /usuario - Usuário com ID ${id} foi excluído com sucesso.` };
     
   } catch (error) {
     logger.error(`DELETE /usuario - Erro ao excluir usuário: ${error.message}`);
@@ -42,7 +43,21 @@ async function deleteUsuario(id, authenticatedUserId) {
 }
 
 async function updateUsuario(usuario) {
-  return await UsuarioRepository.updateUsuario(usuario);
+  try {
+    const result = await UsuarioRepository.updateUsuario(usuario);
+  
+    if (result.status === 'erro') {
+      logger.warn(`PUT /usuario - Usuário  não encontrado.`);
+      return { status: `erro`, message: `Usuário  não encontrado.` };
+    }
+
+    logger.info(`PUT /usuario - Usuário com e-mail ${usuario.email} foi alterado com sucesso.`);
+    return { status: "sucesso", message: `Usuário foi alterado com sucesso.` };
+    
+  } catch (error) {
+    logger.error(`PUT /usuario - Erro ao alterar usuário - ${error.message}`);
+    return { status: "erro", code: 500, message: 'Erro ao alterar usuário.' };
+  }
 }
 
 export default {

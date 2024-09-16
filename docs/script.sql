@@ -1,3 +1,7 @@
+mysqldump -u root -p '' --databases db_api_dev > backup.sql
+
+-- ****************************** BACKUP ****************************--
+
 CREATE TABLE IF NOT EXISTS usuario (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,   
     nome VARCHAR(150) NOT NULL,

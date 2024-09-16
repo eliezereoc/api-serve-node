@@ -111,6 +111,71 @@ router.get("/:id", genericoService.auth, UsuarioController.getUsuario);
  */
 router.delete("/:id", genericoService.auth, UsuarioController.deleteUsuario);
 
+/**
+ * @swagger
+ * /api/v1/usuario:
+ *   put:
+ *     summary: Atualiza as informações de um usuário
+ *     tags: [Usuários]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               nome:
+ *                 type: string
+ *                 example: João dos Santos Pereira
+ *               email:
+ *                 type: string
+ *                 format: email
+ *                 example: joao@joao.com
+ *               senha:
+ *                 type: string
+ *                 format: password
+ *                 example: novaSenha123
+ *               active:
+ *                 type: string
+ *                 enum: [S, N]
+ *                 example: N
+ *             required:
+ *               - nome
+ *               - email
+ *               - active
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: Usuário atualizado com sucesso
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: sucesso
+ *                 id:
+ *                   type: integer
+ *                   example: 1
+ *                 affectedRows:
+ *                   type: integer
+ *                   example: 1
+ *                 message:
+ *                   type: string
+ *                   example: Usuário atualizado com sucesso!
+ *       400: {description: Requisição inválida. Verifique os campos obrigatórios.}
+ *       401: {description: Não autorizado}
+ *       404: {description: Usuário não encontrado}
+ *       500: {description: Erro interno do servidor}
+ * components:
+ *   securitySchemes:
+ *     bearerAuth:
+ *       type: http
+ *       scheme: bearer
+ *       bearerFormat: JWT
+ */
 router.put("/", genericoService.auth, UsuarioController.updateUsuario);
 
 export default router;
