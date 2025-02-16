@@ -1187,3 +1187,126 @@
 2025-02-16T05:04:43.542Z [log_api] info API Backend iniciada com sucesso na porta 3000!
 2025-02-16T05:04:43.567Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
 2025-02-16T05:04:45.778Z [log_api] info POST /usuario - "Faça o update"
+2025-02-16T19:42:06.397Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T19:42:06.425Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T19:42:08.989Z [log_api] error Usuário lucas.oliveira já cadastrado.
+2025-02-16T19:42:08.990Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"Usuário já em usu."}
+2025-02-16T19:42:31.094Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T19:42:31.118Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T19:42:31.792Z [log_api] error Usuário lucas.oliveira já cadastrado.
+2025-02-16T19:42:31.793Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"Usuário já está em usu."}
+2025-02-16T19:43:00.268Z [log_api] info POST /usuario - {"status":"sucesso","message":"Usuário cadastrado com sucesso!","id":47}
+2025-02-16T19:43:20.880Z [log_api] error E-mail lucas@oliveira.com já cadastrado.
+2025-02-16T19:43:20.881Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"E-mail já está em usu."}
+2025-02-16T19:43:37.443Z [log_api] error E-mail lucas@oliveira.com já cadastrado.
+2025-02-16T19:43:37.444Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"E-mail já está em usu."}
+2025-02-16T19:43:42.463Z [log_api] error Usuário lucas.oliveira já cadastrado.
+2025-02-16T19:43:42.463Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"Usuário já está em usu."}
+2025-02-16T19:43:47.103Z [log_api] error Usuário lucas.oliveira1 já cadastrado.
+2025-02-16T19:43:47.103Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"Usuário já está em usu."}
+2025-02-16T19:43:51.474Z [log_api] info POST /usuario - {"status":"sucesso","message":"Usuário cadastrado com sucesso!","id":48}
+2025-02-16T19:43:56.721Z [log_api] error E-mail lucas@oliveira.com já cadastrado.
+2025-02-16T19:43:56.721Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"E-mail já está em usu."}
+2025-02-16T19:44:04.417Z [log_api] error E-mail lucas@oliveira.com já cadastrado.
+2025-02-16T19:44:04.417Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"E-mail já está em usu."}
+2025-02-16T19:44:11.121Z [log_api] error E-mail lucas@oliveira.com já cadastrado.
+2025-02-16T19:44:11.121Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"E-mail já está em usu."}
+2025-02-16T19:44:26.991Z [log_api] info PUT /usuario - O Usuário lucas.oliveira foi alterado com sucesso.
+2025-02-16T19:44:26.992Z [log_api] info PUT /usuario - {"status":"sucesso","message":"Usuário foi alterado com sucesso."}
+2025-02-16T19:44:30.899Z [log_api] error E-mail lucas@oliveira.com já cadastrado.
+2025-02-16T19:44:30.900Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"E-mail já está em usu."}
+2025-02-16T19:45:22.543Z [log_api] info POST /usuario - "Faça o update"
+2025-02-16T19:48:50.324Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T19:48:50.351Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T19:49:14.950Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T19:49:14.973Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T19:59:46.506Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T19:59:46.536Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T20:00:43.744Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T20:00:43.770Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T20:00:51.341Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"Usuário já está em usu."}
+2025-02-16T20:00:54.533Z [log_api] error Usuário lucas.oliveira1 já cadastrado.
+2025-02-16T20:00:54.533Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"Usuário já está em usu."}
+2025-02-16T20:00:58.330Z [log_api] error Usuário lucas.oliveira11 já cadastrado.
+2025-02-16T20:00:58.331Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"Usuário já está em usu."}
+2025-02-16T20:01:01.255Z [log_api] info POST /usuario - {"status":"sucesso","code":200,"message":"Usuário cadastrado com sucesso!"}
+2025-02-16T20:01:10.354Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"Usuário já está em usu."}
+2025-02-16T20:02:00.266Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"Usuário já está em usu."}
+2025-02-16T20:02:45.927Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T20:02:45.950Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T20:02:47.760Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"Usuário já está em usu."}
+2025-02-16T20:04:02.348Z [log_api] info POST /usuario - {"status":"sucesso","code":200,"message":"Usuário cadastrado com sucesso!"}
+2025-02-16T20:04:04.233Z [log_api] error E-mail lucas@n.oliveira2017.com já cadastrado.
+2025-02-16T20:04:04.234Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"E-mail já está em usu."}
+2025-02-16T20:04:33.564Z [log_api] info PUT /usuario - O Usuário lucas.oliveira foi alterado com sucesso.
+2025-02-16T20:04:33.565Z [log_api] info PUT /usuario - {"status":"sucesso","message":"Usuário foi alterado com sucesso."}
+2025-02-16T20:04:37.186Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"Usuário já está em usu."}
+2025-02-16T20:04:49.928Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"Usuário já está em usu."}
+2025-02-16T20:05:27.897Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T20:05:27.918Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T20:11:31.180Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T20:11:31.203Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T20:11:34.781Z [log_api] warn PUT /usuario - Usuário  não encontrado.
+2025-02-16T20:11:34.782Z [log_api] warn POST /usuario - {"status":"erro","message":"Usuario não encontrado ou inativo."}
+2025-02-16T20:16:14.915Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T20:16:14.939Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T20:22:27.556Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T20:22:27.581Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T20:23:17.014Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T20:23:17.039Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T20:23:21.991Z [log_api] warn PUT /usuario - Usuário  não encontrado.
+2025-02-16T20:23:21.991Z [log_api] warn POST /usuario - {"status":"erro","message":"Usuario não encontrado ou inativo."}
+2025-02-16T20:23:25.651Z [log_api] warn PUT /usuario - Usuário  não encontrado.
+2025-02-16T20:23:25.651Z [log_api] warn POST /usuario - {"status":"erro","message":"Usuario não encontrado ou inativo."}
+2025-02-16T20:23:30.504Z [log_api] info PUT /usuario - O Usuário lucas.oliveira foi alterado com sucesso.
+2025-02-16T20:23:30.505Z [log_api] info PUT /usuario - {"status":"sucesso","message":"Usuário foi alterado com sucesso."}
+2025-02-16T20:24:17.549Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T20:24:17.572Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T20:24:20.589Z [log_api] info PUT /usuario - O Usuário lucas.oliveira foi alterado com sucesso.
+2025-02-16T20:24:20.589Z [log_api] info PUT /usuario - {"status":"sucesso","message":"Usuário foi alterado com sucesso."}
+2025-02-16T20:24:52.092Z [log_api] warn PUT /usuario - Usuário  não encontrado.
+2025-02-16T20:24:52.093Z [log_api] warn POST /usuario - {"status":"erro","message":"Usuario não encontrado ou inativo."}
+2025-02-16T20:25:13.728Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T20:25:13.752Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T20:25:15.278Z [log_api] warn PUT /usuario - Usuário  não encontrado.
+2025-02-16T20:25:15.278Z [log_api] warn POST /usuario - {"status":"erro","message":"Usuario não encontrado ou inativo."}
+2025-02-16T20:26:14.981Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T20:26:15.006Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T20:26:30.289Z [log_api] warn PUT /usuario - Usuário  não encontrado.
+2025-02-16T20:26:30.290Z [log_api] warn POST /usuario - {"status":"erro","message":"Usuario não encontrado ou inativo."}
+2025-02-16T20:27:24.597Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T20:27:24.626Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T20:27:26.149Z [log_api] info PUT /usuario - O Usuário lucas.oliveira foi reativado com sucesso.
+2025-02-16T20:27:26.149Z [log_api] info POST /usuario - {"status":"sucesso","code":200,"message":"Usuário cadastrado com sucesso!"}
+2025-02-16T20:27:51.338Z [log_api] info PUT /usuario - O Usuário lucas.oliveira foi alterado com sucesso.
+2025-02-16T20:27:51.339Z [log_api] info PUT /usuario - {"status":"sucesso","message":"Usuário foi alterado com sucesso."}
+2025-02-16T20:28:03.911Z [log_api] warn PUT /usuario - Usuário  não encontrado.
+2025-02-16T20:28:03.912Z [log_api] warn DELETE /usuario - {"status":"erro","message":"Usuario não encontrado ou inativo."}
+2025-02-16T20:28:22.179Z [log_api] info PUT /usuario - O Usuário lucas.oliveira foi reativado com sucesso.
+2025-02-16T20:28:22.179Z [log_api] info POST /usuario - {"status":"sucesso","code":200,"message":"Usuário cadastrado com sucesso!"}
+2025-02-16T20:28:33.577Z [log_api] error E-mail lucas@n.oliveira.com já cadastrado.
+2025-02-16T20:28:33.578Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"E-mail já está em usu."}
+2025-02-16T20:28:39.171Z [log_api] error Usuário lucas.oliveira já cadastrado.
+2025-02-16T20:28:39.172Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"Usuário já está em usu."}
+2025-02-16T20:28:47.434Z [log_api] error E-mail lucas@n.oliveira.com já cadastrado.
+2025-02-16T20:28:47.434Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"E-mail já está em usu."}
+2025-02-16T20:28:52.939Z [log_api] error Usuário lucas.oliveira já cadastrado.
+2025-02-16T20:28:52.939Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"Usuário já está em usu."}
+2025-02-16T20:29:22.139Z [log_api] info PUT /usuario - O Usuário lucas.oliveira foi alterado com sucesso.
+2025-02-16T20:29:22.140Z [log_api] info PUT /usuario - {"status":"sucesso","message":"Usuário foi alterado com sucesso."}
+2025-02-16T20:30:19.710Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T20:30:19.739Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T20:30:46.865Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T20:30:46.889Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T20:30:50.333Z [log_api] info PUT /usuario - O Usuário lucas.oliveira foi reativado com sucesso.
+2025-02-16T20:30:50.334Z [log_api] info POST /usuario - {"status":"sucesso","code":200,"message":"Usuário cadastrado com sucesso!"}
+2025-02-16T20:31:09.660Z [log_api] info POST /usuario - {"status":"sucesso","code":200,"message":"Usuário cadastrado com sucesso!"}
+2025-02-16T20:32:57.620Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T20:32:57.654Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T20:33:04.901Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T20:33:04.923Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T20:33:22.204Z [log_api] info POST /usuario - {"status":"sucesso","code":200,"message":"Usuário cadastrado com sucesso!"}
+2025-02-16T20:34:36.286Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T20:34:36.309Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T20:34:51.579Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T20:34:51.603Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!

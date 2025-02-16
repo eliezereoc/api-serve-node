@@ -6,20 +6,47 @@ async function createUsuario(usuario) {
 
   const usuarioInativo = (user) => user?.active === 'N';
 
-  // Verifica se o email ou o usuário já estão cadastrados e ativos
-  if ((emailExiste?.email && emailExiste.active === 'S') || (usuarioExiste?.usuario && usuarioExiste.active === 'S')) {
-    const userExistente = emailExiste?.email ? emailExiste : usuarioExiste;
-    logger.error(`Usuário/email ${userExistente.email || userExistente.usuario} já cadastrado.`);
-    return { status: "erro", code: 409, message: `Usuário ou e-mail já cadastrado.` };
+
+  if (emailExiste?.email && emailExiste.active === 'S'){     
+    logger.error(`E-mail ${emailExiste?.email } já cadastrado.`);
+    return { status: "erro", code: 409, message: `E-mail já está em usu.` };
+  }
+
+  if (usuarioExiste?.usuario && usuarioExiste.active === 'S'){
+    logger.error(`Usuário ${usuarioExiste.usuario} já cadastrado.`);
+    return { status: "erro", code: 409, message: `Usuário já está em usu.` };
   }
 
   // Verifica se o email ou o usuário existem, mas estão inativos
-  if (usuarioInativo(emailExiste) || usuarioInativo(usuarioExiste)) {
-    console.log('Faz o update');
-    return 'Faça o update';    
+  if (usuarioInativo(emailExiste) || usuarioInativo(usuarioExiste)) { 
+    // Adiciona o campo active antes de criar o usuário
+    
+    usuario.active = 'S';
+
+    const result = await UsuarioRepository.updateUsuario(usuario, "N");
+    if (result.status === 'erro') {
+      logger.warn(`PUT /usuario - Usuário  não encontrado.`);
+      return { status: `erro`, message: `Usuario não encontrado ou inativo.` };
+    }
+ 
+    if (result.status === 'null') {
+      logger.warn(`PUT /usuario - Nenhum registro foi atualizado.`);
+      return { status: `erro`, message: `Nenhum registro foi atualizado.` };
+    } 
+    
+    logger.info(`PUT /usuario - O Usuário ${usuario.usuario} foi reativado com sucesso.`);
+    return { status: "sucesso", code: 200, message: `Usuário cadastrado com sucesso!` };
   }
 
-  return await UsuarioRepository.createUsuario(usuario);
+  const result = await UsuarioRepository.createUsuario(usuario);
+
+  if (result.status === 'sucesso') {
+    return { status: "sucesso", code: 200, message: `Usuário cadastrado com sucesso!` };
+  }
+
+  if (result.status === 'erro') {
+    return { status: "erro", code: 500, message: `Erro ao inserir o registro!` };
+  }
 }
 
 async function getUsuarios() {
@@ -35,7 +62,6 @@ async function getUsuarioAuth(info) {
 }
 
 async function deleteUsuario(id, authenticatedUserId) {
-
   if (id == authenticatedUserId) {
     logger.warn(`DELETE /usuario - Você não pode excluir sua própria conta.`);
     return { status: "erro", code: 403, message: 'Você não pode excluir sua própria conta.' };
@@ -55,9 +81,7 @@ async function deleteUsuario(id, authenticatedUserId) {
   } catch (error) {
     logger.error(`DELETE /usuario - Erro ao excluir usuário: ${error.message}`);
     return { status: "erro", code: 500, message: 'Erro ao excluir usuário.' };
-  }
-
-  
+  }  
 }
 
 async function updateUsuario(usuario) {
@@ -84,31 +108,12 @@ async function updateUsuario(usuario) {
     return { status: "erro", code: error.status, message: `Erro ao alterar usuário.` };
   }
 }
-
-async function updateAtivaUsuario(usuario) {
-  try {
-    //const result = await UsuarioRepository.updateUsuario(usuario);
-  
-    // if (result.status === 'erro') {
-    //   logger.warn(`PUT /usuario - Usuário  não encontrado.`);
-    //   return { status: `erro`, message: `Usuário  não encontrado.` };
-    // }
-
-    // logger.info(`PUT /usuario - Usuário com e-mail ${usuario.email} foi alterado com sucesso.`);
-    // return { status: "sucesso", message: `Usuário foi alterado com sucesso.` };
-    
-  } catch (error) {
-    logger.error(`PUT /usuario - Erro ao alterar usuário - ${error.message}`);
-    return { status: "erro", code: 500, message: 'Erro ao alterar usuário.' };
-  }
-}
-
+ 
 export default {
   createUsuario,
   getUsuarios,
   getUsuario,
   getUsuarioAuth,
   deleteUsuario,
-  updateUsuario,
-  updateAtivaUsuario
+  updateUsuario  
 };
