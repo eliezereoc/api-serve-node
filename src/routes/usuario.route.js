@@ -18,7 +18,7 @@ const router = express.Router();
  *         application/json:
  *           schema: { type: object, properties: { nome: { type: string, example: "John Doe" }, email: { type: string, example: "Johndoe@Johndoe.com" }, senha: { type: string, example: "senha123" }, usuario: { type: string, example: "john.doe" } } }
  *     responses:
- *       200: { description: Usuário criado com sucesso, content: { application/json: { schema: { type: object, properties: { status: { type: string, example: "sucesso" }, message: { type: string, example: "Usuário cadastrado com sucesso!" }, id: { type: integer, example: 1} } } } } }
+ *       200: { description: Usuário criado com sucesso, content: { application/json: { schema: { type: object, properties: { status: { type: string, example: "sucesso" }, message: { type: string, example: "Usuário cadastrado com sucesso!" } } } } } }
  *       401: { description: Não autorizado }
  *       409: { description: Conflict - Usuário já cadastrado }
  *       500: { description: Erro interno do servidor }
