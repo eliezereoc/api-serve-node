@@ -16,7 +16,7 @@ const router = express.Router();
  *       required: true
  *       content:
  *         application/json:
- *           schema: { type: object, properties: { nome: { type: string, example: "João" }, email: { type: string, example: "joao@joao.com" }, senha: { type: string, example: "senha123" }, active: { type: boolean, example: true } } }
+ *           schema: { type: object, properties: { nome: { type: string, example: "John Doe" }, email: { type: string, example: "Johndoe@Johndoe.com" }, senha: { type: string, example: "senha123" }, usuario: { type: string, example: "john.doe" } } }
  *     responses:
  *       200: { description: Usuário criado com sucesso, content: { application/json: { schema: { type: object, properties: { status: { type: string, example: "sucesso" }, message: { type: string, example: "Usuário cadastrado com sucesso!" }, id: { type: integer, example: 1} } } } } }
  *       401: { description: Não autorizado }
@@ -27,7 +27,7 @@ router.post("/", AuthController.auth, UsuarioController.createUsuario);
 
 /**
  * @swagger
- * /api/v1/usuarios:
+ * /api/v1/usuario:
  *   get:
  *     summary: Retorna todos os usuários
  *     tags: [Usuários]
@@ -38,7 +38,7 @@ router.post("/", AuthController.auth, UsuarioController.createUsuario);
  *         description: Lista de usuários
  *         content:
  *           application/json:
- *             schema: { type: array, items: { type: object, properties: { id: { type: integer, example: 1 }, nome: { type: string, example: "João" }, email: { type: string, example: "joao@joao.com" }, data_criacao: { type: string, format: date-time, example: "2024-09-12T03:00:00Z" }, data_alteracao: { type: string, format: date-time, example: "2024-09-12T03:00:00Z" } } } }
+ *             schema: { type: array, items: { type: object, properties: { id: { type: integer, example: 1 }, nome: { type: string, example: "John Doe" }, email: { type: string, example: "johndoe@johndoe.com" }, data_criacao: { type: string, format: date-time, example: "2024-09-12T03:00:00Z" }, data_alteracao: { type: string, format: date-time, example: "2024-09-12T03:00:00Z" } } } }
  *       404: { description: Não há usuários cadastrados }
  *       401: { description: Não autorizado }
  *       500: { description: Erro interno do servidor }
@@ -122,13 +122,16 @@ router.delete("/:id", AuthController.auth, UsuarioController.deleteUsuario);
  *           schema:
  *             type: object
  *             properties:
+ *               usuario:
+ *                 type: string
+ *                 example: john.doe
  *               nome:
  *                 type: string
- *                 example: João dos Santos Pereira
+ *                 example: John Doe
  *               email:
  *                 type: string
  *                 format: email
- *                 example: joao@joao.com
+ *                 example: johndoeo@johndoe.com
  *               senha:
  *                 type: string
  *                 format: password
@@ -136,7 +139,7 @@ router.delete("/:id", AuthController.auth, UsuarioController.deleteUsuario);
  *               active:
  *                 type: string
  *                 enum: [S, N]
- *                 example: N
+ *                 example: S
  *             required:
  *               - nome
  *               - email

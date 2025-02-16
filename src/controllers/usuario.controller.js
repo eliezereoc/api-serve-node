@@ -3,7 +3,7 @@ import UsuarioService from "../services/usuario.service.js";
 async function createUsuario(req, res, next) {
   try {
     const usuario = req.body;
-    if (!usuario.nome || !usuario.email || !usuario.senha || !usuario.active)
+    if (!usuario.nome || !usuario.email || !usuario.senha || !usuario.usuario)
       throw new Error(
         `POST/usuarios - Todos os campos são obrigatórios - ${JSON.stringify(
           usuario
@@ -80,8 +80,8 @@ async function updateUsuario(req, res, next) {
   try {
     const usuario = req.body;    
     
-    if (!usuario.email) {
-      return res.status(400).json({ message: "Requisição inválida. Verifique os campos obrigatórios." });
+    if (!usuario.usuario) {
+      return res.status(400).json({ message: "Requisição inválida. O campo 'usuário' é obrigatório." });
     }
    
     const result = await UsuarioService.updateUsuario(usuario);

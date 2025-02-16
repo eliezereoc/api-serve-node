@@ -913,3 +913,277 @@
 2025-02-16T02:12:27.631Z [log_api] info PUT /usuario - {"status":"sucesso","message":"Usuário foi alterado com sucesso."}
 2025-02-16T02:13:01.205Z [log_api] info API Backend iniciada com sucesso na porta 3000!
 2025-02-16T02:13:01.230Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T02:52:23.460Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T02:52:23.481Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T02:52:26.695Z [log_api] info GET /usuarios - [{"id":33,"nome":"eliezer","email":"eliezeroc@gmail.com","active":"S","data_criacao":"2025-02-16T02:51:41.000Z","data_alteracao":null,"usuario":"eliezer.oliveira"}]
+2025-02-16T02:54:30.360Z [log_api] error POST  - POST/usuarios - Todos os campos são obrigatórios - {"nome":"Lucas","email":"lucas.oliveira","senha":"senha123","usuario":"lucas.oliveira"}
+2025-02-16T02:55:34.281Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T02:55:34.303Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T02:56:27.752Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T02:56:27.775Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T02:56:41.220Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T02:56:41.245Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T02:56:58.843Z [log_api] info POST /usuario - {"status":"sucesso","message":"Usuário cadastrado com sucesso!","id":35}
+2025-02-16T02:57:03.474Z [log_api] info GET /usuarios - [{"id":33,"nome":"eliezer","email":"eliezeroc@gmail.com","active":"S","data_criacao":"2025-02-16T02:51:41.000Z","data_alteracao":null,"usuario":"eliezer.oliveira"},{"id":35,"nome":"Lucas","email":"lucas.oliveira","active":"S","data_criacao":"2025-02-16T02:56:58.000Z","data_alteracao":null,"usuario":"lucas.oliveira"}]
+2025-02-16T02:58:59.915Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T02:58:59.936Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T03:00:06.378Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T03:00:06.416Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T03:01:46.333Z [log_api] info POST /usuario - {"status":"sucesso","message":"Usuário cadastrado com sucesso!","id":36}
+2025-02-16T03:01:51.150Z [log_api] info GET /usuarios - [{"id":33,"nome":"eliezer","email":"eliezeroc@gmail.com","active":"S","data_criacao":"2025-02-16T02:51:41.000Z","data_alteracao":null,"usuario":"eliezer.oliveira"},{"id":35,"nome":"Lucas","email":"lucas.oliveira","active":"S","data_criacao":"2025-02-16T02:56:58.000Z","data_alteracao":null,"usuario":"lucas.oliveira"},{"id":36,"nome":"John Doe","email":"Johndoe@Johndoe.com","active":"S","data_criacao":"2025-02-16T03:01:46.000Z","data_alteracao":null,"usuario":"john.doe"}]
+2025-02-16T03:02:23.307Z [log_api] error Usuário Johndoe@Johndoe.com já cadastrado.
+2025-02-16T03:02:23.308Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"Usuário Johndoe@Johndoe.com já cadastrado."}
+2025-02-16T03:03:13.663Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T03:03:13.691Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T03:04:16.043Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T03:04:16.068Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T03:08:52.108Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T03:08:52.132Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T03:08:58.705Z [log_api] info GET /usuarios - [{"id":33,"nome":"eliezer","email":"eliezeroc@gmail.com","active":"S","data_criacao":"2025-02-16T02:51:41.000Z","data_alteracao":null,"usuario":"eliezer.oliveira"},{"id":35,"nome":"Lucas","email":"lucas.oliveira","active":"S","data_criacao":"2025-02-16T02:56:58.000Z","data_alteracao":null,"usuario":"lucas.oliveira"},{"id":36,"nome":"John Doe","email":"Johndoe@Johndoe.com","active":"S","data_criacao":"2025-02-16T03:01:46.000Z","data_alteracao":null,"usuario":"john.doe"}]
+2025-02-16T03:10:48.995Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T03:10:49.019Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T03:12:49.006Z [log_api] warn GET /usuario - ID: 1 não encontrado
+2025-02-16T03:13:00.332Z [log_api] info GET /usuario: [{"id":33,"nome":"eliezer","email":"eliezeroc@gmail.com","active":"S","data_criacao":"2025-02-16T02:51:41.000Z","data_alteracao":null,"usuario":"eliezer.oliveira"}]
+2025-02-16T03:17:40.769Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T03:17:40.795Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T03:19:52.829Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T03:19:52.856Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T03:22:02.235Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T03:22:02.264Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T03:22:45.791Z [log_api] info GET /usuarios - [{"id":33,"nome":"eliezer","email":"eliezeroc@gmail.com","active":"S","data_criacao":"2025-02-16T02:51:41.000Z","data_alteracao":null,"usuario":"eliezer.oliveira"},{"id":35,"nome":"Lucas","email":"lucas.oliveira","active":"S","data_criacao":"2025-02-16T02:56:58.000Z","data_alteracao":null,"usuario":"lucas.oliveira"},{"id":36,"nome":"John Doe","email":"Johndoe@Johndoe.com","active":"S","data_criacao":"2025-02-16T03:01:46.000Z","data_alteracao":null,"usuario":"john.doe"}]
+2025-02-16T03:23:46.873Z [log_api] warn GET /usuario - ID: 28 não encontrado
+2025-02-16T03:23:52.789Z [log_api] warn GET /usuario - ID: 30 não encontrado
+2025-02-16T03:23:56.688Z [log_api] warn GET /usuario - ID: 31 não encontrado
+2025-02-16T03:23:59.805Z [log_api] info GET /usuario: [{"id":33,"nome":"eliezer","email":"eliezeroc@gmail.com","active":"S","data_criacao":"2025-02-16T02:51:41.000Z","data_alteracao":null,"usuario":"eliezer.oliveira"}]
+2025-02-16T03:24:49.401Z [log_api] info DELETE /usuario - Usuário com ID 35 foi excluído com sucesso.
+2025-02-16T03:24:49.401Z [log_api] info DELETE /usuario - {"status":"sucesso","message":"DELETE /usuario - Usuário com ID 35 foi excluído com sucesso."}
+2025-02-16T03:26:04.567Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T03:26:04.591Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T03:28:07.502Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T03:28:07.526Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T03:28:25.500Z [log_api] warn PUT /usuario - Usuário  não encontrado.
+2025-02-16T03:28:25.501Z [log_api] warn DELETE /usuario - {"status":"erro","message":"Usuario não encontrado ou inativo."}
+2025-02-16T03:28:44.574Z [log_api] info POST /usuario - {"status":"sucesso","message":"Usuário cadastrado com sucesso!","id":37}
+2025-02-16T03:28:47.253Z [log_api] warn PUT /usuario - Usuário  não encontrado.
+2025-02-16T03:28:47.254Z [log_api] warn DELETE /usuario - {"status":"erro","message":"Usuario não encontrado ou inativo."}
+2025-02-16T03:30:02.832Z [log_api] info DELETE /usuario - Usuário com ID 37 foi excluído com sucesso.
+2025-02-16T03:30:02.832Z [log_api] info DELETE /usuario - {"status":"sucesso","message":"Usuário excluído com sucesso."}
+2025-02-16T03:30:09.984Z [log_api] info POST /usuario - {"status":"sucesso","message":"Usuário cadastrado com sucesso!","id":38}
+2025-02-16T03:30:23.789Z [log_api] warn PUT /usuario - Usuário  não encontrado.
+2025-02-16T03:30:23.790Z [log_api] warn DELETE /usuario - {"status":"erro","message":"Usuario não encontrado ou inativo."}
+2025-02-16T03:30:46.677Z [log_api] warn PUT /usuario - Usuário  não encontrado.
+2025-02-16T03:30:46.678Z [log_api] warn DELETE /usuario - {"status":"erro","message":"Usuario não encontrado ou inativo."}
+2025-02-16T03:31:42.321Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T03:31:42.375Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T03:32:01.652Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T03:32:01.674Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T03:32:49.711Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T03:32:49.737Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T03:32:59.199Z [log_api] info PUT /usuario - O Usuário lucas.oliveira foi alterado com sucesso.
+2025-02-16T03:32:59.200Z [log_api] info PUT /usuario - {"status":"sucesso","message":"Usuário foi alterado com sucesso."}
+2025-02-16T03:33:25.989Z [log_api] info PUT /usuario - O Usuário lucas.oliveira foi alterado com sucesso.
+2025-02-16T03:33:25.990Z [log_api] info PUT /usuario - {"status":"sucesso","message":"Usuário foi alterado com sucesso."}
+2025-02-16T03:34:34.885Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T03:34:34.908Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T03:34:38.400Z [log_api] info PUT /usuario - O Usuário lucas.oliveira foi alterado com sucesso.
+2025-02-16T03:34:38.401Z [log_api] info PUT /usuario - {"status":"sucesso","message":"Usuário foi alterado com sucesso."}
+2025-02-16T03:35:15.439Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T03:35:15.461Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T03:35:20.351Z [log_api] info PUT /usuario - O Usuário lucas.oliveira foi alterado com sucesso.
+2025-02-16T03:35:20.351Z [log_api] info PUT /usuario - {"status":"sucesso","message":"Usuário foi alterado com sucesso."}
+2025-02-16T03:38:50.438Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T03:38:50.470Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T03:39:03.716Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T03:39:03.741Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T03:39:05.350Z [log_api] warn PUT /usuario - Nenhum campo para atualizar.
+2025-02-16T03:39:05.350Z [log_api] warn DELETE /usuario - {"status":"erro","message":"Nenhum campo para atualizar."}
+2025-02-16T03:39:54.943Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T03:39:54.966Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T03:41:02.712Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T03:41:02.737Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T03:41:11.111Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T03:41:11.134Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T03:41:13.644Z [log_api] warn PUT /usuario - Nenhum registro foi atualizado.
+2025-02-16T03:41:13.645Z [log_api] warn DELETE /usuario - {"status":"erro","message":"Nenhum registro foi atualizado."}
+2025-02-16T03:41:27.378Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T03:41:27.402Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T03:41:28.643Z [log_api] info PUT /usuario - O Usuário lucas.oliveira foi alterado com sucesso.
+2025-02-16T03:41:28.644Z [log_api] info PUT /usuario - {"status":"sucesso","message":"Usuário foi alterado com sucesso."}
+2025-02-16T03:44:17.928Z [log_api] info PUT /usuario - O Usuário lucas.oliveira foi alterado com sucesso.
+2025-02-16T03:44:17.929Z [log_api] info PUT /usuario - {"status":"sucesso","message":"Usuário foi alterado com sucesso."}
+2025-02-16T03:45:22.160Z [log_api] error PUT /usuario - Erro ao alterar usuário - Erro ao acessar o banco de dados.
+2025-02-16T03:45:22.160Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T03:45:36.353Z [log_api] error PUT /usuario - Erro ao alterar usuário - Erro ao acessar o banco de dados.
+2025-02-16T03:45:36.354Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T03:45:45.247Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T03:45:45.273Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T03:45:47.954Z [log_api] error PUT /usuario - Erro ao alterar usuário - Erro ao acessar o banco de dados.
+2025-02-16T03:45:47.954Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T03:48:12.202Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T03:48:12.233Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T03:48:14.624Z [log_api] error PUT /usuario - Erro ao alterar usuário - Erro ao acessar o banco de dados.
+2025-02-16T03:48:14.624Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T03:48:44.064Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T03:48:44.090Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T03:48:45.469Z [log_api] error PUT /usuario - Erro ao alterar usuário - Erro ao acessar o banco de dados.
+2025-02-16T03:48:45.470Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T03:48:53.607Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T03:48:53.630Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T03:48:55.429Z [log_api] error PUT /usuario - Erro ao alterar usuário - result is not defined
+2025-02-16T03:48:55.430Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T03:49:04.206Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T03:49:04.227Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T03:49:45.369Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T03:49:45.391Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T03:49:46.994Z [log_api] error PUT /usuario - Erro ao alterar usuário - Erro ao acessar o banco de dados.
+2025-02-16T03:49:46.994Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T03:50:35.438Z [log_api] error PUT /usuario - Erro ao alterar usuário - Erro ao acessar o banco de dados.
+2025-02-16T03:50:35.439Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T03:51:02.442Z [log_api] info PUT /usuario - O Usuário lucas.oliveira foi alterado com sucesso.
+2025-02-16T03:51:02.442Z [log_api] info PUT /usuario - {"status":"sucesso","message":"Usuário foi alterado com sucesso."}
+2025-02-16T03:51:46.170Z [log_api] info PUT /usuario - O Usuário lucas.oliveira foi alterado com sucesso.
+2025-02-16T03:51:46.171Z [log_api] info PUT /usuario - {"status":"sucesso","message":"Usuário foi alterado com sucesso."}
+2025-02-16T03:52:25.705Z [log_api] error PUT /usuario - Erro ao alterar usuário - Erro ao acessar o banco de dados.
+2025-02-16T03:52:25.705Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T04:06:30.421Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T04:06:30.447Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T04:07:43.791Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T04:07:43.817Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T04:15:57.734Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T04:15:57.761Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T04:16:24.816Z [log_api] error Usuário lucas.oliveira já cadastrado.
+2025-02-16T04:16:24.816Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"Usuário lucas.oliveira já cadastrado."}
+2025-02-16T04:16:57.190Z [log_api] error Usuário lucas@loliveira.com já cadastrado.
+2025-02-16T04:16:57.191Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"Usuário lucas@loliveira.com já cadastrado."}
+2025-02-16T04:18:12.027Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T04:18:12.057Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T04:18:14.609Z [log_api] error Usuário/email lucas@loliveira.com já cadastrado.
+2025-02-16T04:18:14.610Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"Usuário ou email já cadastrado."}
+2025-02-16T04:18:38.832Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T04:18:39.026Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T04:18:42.203Z [log_api] error Usuário/email lucas@loliveira.com já cadastrado.
+2025-02-16T04:18:42.204Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"Usuário ou e-mail já cadastrado."}
+2025-02-16T04:18:56.258Z [log_api] info POST /usuario - {"status":"sucesso","message":"Usuário cadastrado com sucesso!","id":39}
+2025-02-16T04:19:24.661Z [log_api] error PUT /usuario - Erro ao alterar usuário - Erro ao acessar o banco de dados.
+2025-02-16T04:19:24.662Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T04:19:49.753Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T04:19:49.775Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T04:26:46.463Z [log_api] error PUT /usuario - Erro ao alterar usuário - Erro ao acessar o banco de dados.
+2025-02-16T04:26:46.464Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T04:27:05.063Z [log_api] info PUT /usuario - O Usuário lucas.oliveira foi alterado com sucesso.
+2025-02-16T04:27:05.064Z [log_api] info PUT /usuario - {"status":"sucesso","message":"Usuário foi alterado com sucesso."}
+2025-02-16T04:27:09.933Z [log_api] error PUT /usuario - Erro ao alterar usuário - Erro ao acessar o banco de dados.
+2025-02-16T04:27:09.933Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T04:28:32.507Z [log_api] info POST /usuario - {"status":"sucesso","message":"Usuário cadastrado com sucesso!","id":41}
+2025-02-16T04:28:36.850Z [log_api] error PUT /usuario - Erro ao alterar usuário - Erro ao acessar o banco de dados.
+2025-02-16T04:28:36.850Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T04:29:40.983Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T04:29:41.007Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T04:29:42.226Z [log_api] error PUT /usuario - Erro ao alterar usuário - Erro ao acessar o banco de dados.
+2025-02-16T04:29:42.227Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T04:30:43.245Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T04:30:43.274Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T04:30:45.304Z [log_api] error PUT /usuario - Erro ao alterar usuário - Erro ao acessar o banco de dados.
+2025-02-16T04:30:45.305Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T04:31:26.955Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T04:31:26.989Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T04:31:29.450Z [log_api] error PUT /usuario - Erro ao alterar usuário - Erro ao acessar o banco de dados.
+2025-02-16T04:31:29.450Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T04:32:21.925Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T04:32:21.947Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T04:32:24.636Z [log_api] error PUT /usuario - Erro ao alterar usuário - Erro ao acessar o banco de dados.
+2025-02-16T04:32:24.636Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T04:33:31.585Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T04:33:31.608Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T04:33:33.578Z [log_api] error PUT /usuario - Erro ao alterar usuário - Erro ao acessar o banco de dados.
+2025-02-16T04:33:33.579Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T04:34:19.745Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T04:34:19.770Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T04:34:21.908Z [log_api] error PUT /usuario - Erro ao alterar usuário - Erro ao acessar o banco de dados.
+2025-02-16T04:34:21.908Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T04:34:53.537Z [log_api] error PUT /usuario - Erro ao alterar usuário - Erro ao acessar o banco de dados.
+2025-02-16T04:34:53.538Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T04:35:05.894Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T04:35:05.927Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T04:35:07.313Z [log_api] error PUT /usuario - Erro ao alterar usuário - Erro ao acessar o banco de dados.
+2025-02-16T04:35:07.314Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T04:35:17.812Z [log_api] error PUT /usuario - Erro ao alterar usuário - Erro ao acessar o banco de dados.
+2025-02-16T04:35:17.813Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T04:35:32.780Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T04:35:32.810Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T04:35:33.865Z [log_api] error PUT /usuario - Erro ao alterar usuário - Erro ao acessar o banco de dados.
+2025-02-16T04:35:33.865Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T04:36:17.404Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T04:36:17.428Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T04:36:20.748Z [log_api] error PUT /usuario - Erro ao alterar usuário - Erro ao acessar o banco de dados.
+2025-02-16T04:36:20.748Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T04:37:28.342Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T04:37:28.366Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T04:37:30.645Z [log_api] error PUT /usuario - Erro ao alterar usuário - Erro ao acessar o banco de dados.
+2025-02-16T04:37:30.646Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T04:39:09.312Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T04:39:09.334Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T04:39:11.215Z [log_api] error PUT /usuario - Erro ao alterar usuário - Erro ao acessar o banco de dados.
+2025-02-16T04:39:11.215Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T04:39:15.208Z [log_api] error PUT /usuario - Erro ao alterar usuário - Erro ao acessar o banco de dados.
+2025-02-16T04:39:15.208Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T04:40:16.531Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T04:40:16.559Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T04:40:18.371Z [log_api] error PUT /usuario - Erro ao alterar usuário - Erro ao acessar o banco de dados.
+2025-02-16T04:40:18.372Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T04:40:52.102Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T04:40:52.126Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T04:40:53.677Z [log_api] info PUT /usuario - O Usuário lucas.oliveira foi alterado com sucesso.
+2025-02-16T04:40:53.677Z [log_api] info PUT /usuario - {"status":"sucesso","message":"Usuário foi alterado com sucesso."}
+2025-02-16T04:41:07.645Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T04:41:07.673Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T04:41:09.188Z [log_api] error PUT /usuario - Erro ao alterar usuário - Erro ao acessar o banco de dados.
+2025-02-16T04:41:09.188Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T04:41:19.802Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T04:41:19.824Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T04:41:48.524Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T04:41:48.547Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T04:42:43.891Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T04:42:43.917Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T04:42:45.517Z [log_api] error PUT /usuario - Erro ao alterar usuário - Erro ao acessar o banco de dados.
+2025-02-16T04:42:45.518Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T04:45:29.901Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T04:45:29.925Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T04:47:08.973Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T04:47:08.997Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T04:47:12.667Z [log_api] error PUT /usuario - Erro ao alterar usuário - [object Object]
+2025-02-16T04:47:12.667Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T04:47:33.471Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T04:47:33.496Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T04:47:35.952Z [log_api] error PUT /usuario - Erro ao alterar usuário - [object Object]
+2025-02-16T04:47:35.953Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T04:50:17.218Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T04:50:17.242Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T04:50:20.252Z [log_api] error PUT /usuario - Erro ao alterar usuário - Mensagem: Erro ao acessar o banco de dados. - Erro: Data too long for column 'email' at row 1
+2025-02-16T04:50:20.252Z [log_api] warn DELETE /usuario - {"status":"erro","code":500,"message":"Erro ao alterar usuário."}
+2025-02-16T04:51:11.062Z [log_api] info PUT /usuario - O Usuário lucas.oliveira foi alterado com sucesso.
+2025-02-16T04:51:11.063Z [log_api] info PUT /usuario - {"status":"sucesso","message":"Usuário foi alterado com sucesso."}
+2025-02-16T04:52:20.542Z [log_api] info PUT /usuario - O Usuário lucas.oliveira foi alterado com sucesso.
+2025-02-16T04:52:20.542Z [log_api] info PUT /usuario - {"status":"sucesso","message":"Usuário foi alterado com sucesso."}
+2025-02-16T04:52:50.282Z [log_api] info PUT /usuario - O Usuário lucas.oliveira foi alterado com sucesso.
+2025-02-16T04:52:50.282Z [log_api] info PUT /usuario - {"status":"sucesso","message":"Usuário foi alterado com sucesso."}
+2025-02-16T04:55:37.928Z [log_api] info POST /usuario - {"status":"sucesso","message":"Usuário cadastrado com sucesso!","id":42}
+2025-02-16T04:56:00.571Z [log_api] info GET /usuarios - [{"id":40,"nome":"eliezer","email":"eliezeroc@gmail.com","active":"S","data_criacao":"2025-02-16T04:28:18.000Z","data_alteracao":null,"usuario":"eliezer.oliveira"},{"id":41,"nome":"Lucas Nascimento de Oliveira","email":"lucas@n.oliveira2017.com","active":"S","data_criacao":"2025-02-16T04:28:32.000Z","data_alteracao":"2025-02-16T04:52:50.000Z","usuario":"lucas.oliveira"},{"id":42,"nome":"John Doe","email":"john.doe@doe.com","active":"S","data_criacao":"2025-02-16T04:55:37.000Z","data_alteracao":null,"usuario":"john.doe"}]
+2025-02-16T04:57:51.813Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T04:57:51.835Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T04:58:25.873Z [log_api] info PUT /usuario - O Usuário john.doe foi alterado com sucesso.
+2025-02-16T04:58:25.874Z [log_api] info PUT /usuario - {"status":"sucesso","message":"Usuário foi alterado com sucesso."}
+2025-02-16T04:58:56.076Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T04:58:56.107Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T04:59:10.354Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T04:59:10.379Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T04:59:42.440Z [log_api] error Usuário/email lucas.oliveira já cadastrado.
+2025-02-16T04:59:42.440Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"Usuário ou e-mail já cadastrado."}
+2025-02-16T05:00:28.442Z [log_api] info PUT /usuario - O Usuário lucas.oliveira foi alterado com sucesso.
+2025-02-16T05:00:28.443Z [log_api] info PUT /usuario - {"status":"sucesso","message":"Usuário foi alterado com sucesso."}
+2025-02-16T05:00:42.721Z [log_api] info POST /usuario - "Faça o update"
+2025-02-16T05:04:23.595Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T05:04:23.624Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T05:04:43.542Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T05:04:43.567Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T05:04:45.778Z [log_api] info POST /usuario - "Faça o update"

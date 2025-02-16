@@ -1,5 +1,7 @@
 mysqldump -u root -p '' --databases db_api_dev > backup.sql
 
+SHOW CREATE TABLE usuario;
+
 -- ****************************** BACKUP ****************************--
 
 CREATE TABLE IF NOT EXISTS usuario (
@@ -10,8 +12,6 @@ CREATE TABLE IF NOT EXISTS usuario (
 );
 
 INSERT INTO usuario (nome, email, senha) VALUES ('eliezer', 'eliezeroc@gmail.com', 'admin');
-SELECT * FROM usuario;
-
 -- ****************************** 11/09/2024 ****************************--
 
 ALTER TABLE usuario
@@ -26,6 +26,14 @@ MODIFY `data_alteracao` TIMESTAMP NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP;
 
 ALTER TABLE usuario
 ADD CONSTRAINT email_unico UNIQUE (email);
+
+ALTER TABLE usuario
+ADD COLUMN usuario VARCHAR(50) NOT NULL UNIQUE;
+
+INSERT INTO usuario (nome, email, senha, usuario) VALUES ('eliezer', 'eliezeroc@gmail.com', 'admin', 'eliezer.oliveira'); 
+
+ALTER TABLE usuario
+MODIFY email CHAR(150) NOT NULL;
 -- ****************************** 15/02/2025 ****************************--
 
 

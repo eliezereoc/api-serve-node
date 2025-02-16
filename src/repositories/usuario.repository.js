@@ -4,9 +4,8 @@ import genericoService from "../services/auth.service.js";
 async function createUsuario(usuario) {
   const conn = await connect();
   try {
-    const sql =
-      "INSERT INTO usuario ( nome, senha, email, active ) values ( ?, ?, ?, ? ) ";
-    const values = [usuario.nome, usuario.senha, usuario.email, usuario.active];
+    const sql = "INSERT INTO usuario ( nome, senha, email, usuario ) values ( ?, ?, ?, ? ) ";
+    const values = [usuario.nome, usuario.senha, usuario.email, usuario.usuario];
 
     const [row] = await conn.query(sql, values);
     return {
@@ -79,11 +78,28 @@ async function getUsuarioByEmail(email) {
   }
 }
 
+async function getUsuarioByUsuario(usuario) {
+  const conn = await connect();
+  try {
+    const [row] = await conn.query(
+      "SELECT usuario, active FROM usuario WHERE usuario = ? ",
+      [usuario]
+    );
+    return row;
+  } catch (error) {
+    throw {
+      status: 500,
+      message: "Erro ao acessar o banco de dados.",
+      error: error.message,
+    };
+  }
+}
+
 async function getUsuarioAuth(usuario) {
   const conn = await connect();
   try {
     const [row] = await conn.query(
-      "SELECT * FROM usuario WHERE email = ? LIMIT 1",
+      "SELECT * FROM usuario WHERE usuario = ? LIMIT 1",
       [usuario.usuario]
     );
 
@@ -137,19 +153,19 @@ async function updateUsuario(usuario) {
   const conn = await connect();
   try {
     // Verifica se o usuário existe e está ativo
-    const SELECT_USUARIO_QUERY = `SELECT 1 
+    const SELECT_USUARIO_QUERY = `SELECT *
                                   FROM usuario 
-                                  WHERE email = ?
+                                  WHERE usuario = ?
                                   AND active != 'N'`;
-    const [rows] = await conn.query(SELECT_USUARIO_QUERY, [usuario.email]);
-
-    if (rows.length === 0) {
+    const [rows] = await conn.query(SELECT_USUARIO_QUERY, [usuario.usuario]);
+ 
+    if (rows.length === 0) {      
       return {
         status: "erro"
       };
     } else {
       // Constrói a query de UPDATE dinamicamente
-      const camposPermitidos = ["nome", "senha", "active"];
+      const camposPermitidos = ["nome", "email", "senha", "active"];
       const camposParaAtualizar = [];
       const valores = [];
 
@@ -157,7 +173,7 @@ async function updateUsuario(usuario) {
         if (usuario[campo] !== undefined) {
           camposParaAtualizar.push(`${campo} = ?`);
           valores.push(usuario[campo]);
-        }
+        }       
       }
 
       if (camposParaAtualizar.length === 0) {
@@ -168,11 +184,18 @@ async function updateUsuario(usuario) {
 
       const UPDATE_USUARIO_QUERY = `UPDATE usuario 
                                     SET ${camposParaAtualizar.join(", ")}
-                                    WHERE email = ?`;
+                                    WHERE usuario = ?`;
 
-      valores.push(usuario.email); // Adiciona o email para a condição WHERE 
+      valores.push(usuario.usuario); // Adiciona o usuario para a condição WHERE 
       
-      await conn.query(UPDATE_USUARIO_QUERY, valores);
+      const [result] = await conn.query(UPDATE_USUARIO_QUERY, valores);
+
+      // Verifica se alguma linha foi afetada
+      if (result.affectedRows === 0) {
+        return {
+          status: "null" 
+        };
+      }
 
       return {
         status: "sucesso"
@@ -196,4 +219,5 @@ export default {
   deleteUsuario,
   updateUsuario,
   getUsuarioByEmail,
+  getUsuarioByUsuario,
 };

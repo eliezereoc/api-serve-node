@@ -17,7 +17,7 @@ const router = express.Router();
  *           schema:
  *             type: object
  *             properties:
- *               email: { type: string, example: 'usuario123' }
+ *               usuario: { type: string, example: 'john.doe' }
  *               senha: { type: string, example: 'senha123' }
  *     responses:
  *       200:

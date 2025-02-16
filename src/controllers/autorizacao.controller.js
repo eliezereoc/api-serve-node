@@ -1,17 +1,17 @@
 import usuarioService from "../services/usuario.service.js";
-import genericoService from "../services/auth.service.js";
+import AuthController from "../services/auth.service.js";
 
 async function verificaUsuario(req, res, next) {
   try {  
-    if (req.body.email === undefined || req.body.senha === undefined)
+    if (req.body.usuario === undefined || req.body.senha === undefined)
       return res.status(400).send({ message: "Informe usuário e senha!" });
 
-    const usuario = { usuario: req.body.email, senha: req.body.senha };        
+    const usuario = { usuario: req.body.usuario, senha: req.body.senha };        
     const verifica = await usuarioService.getUsuarioAuth(usuario);
 
     if (verifica.status === "erro") return res.status(401).send(verifica);
 
-    const token = await genericoService.criarToken(verifica.usuario);
+    const token = await AuthController.criarToken(verifica.usuario);
 
     if (token !== "" && token !== undefined)
       return res.status(200).send({ access_token: token });
