@@ -66,7 +66,7 @@ async function deleteUsuario(req, res, next) {
 
     if (result.status === "erro") {
       logger.warn(`DELETE /usuario - ${JSON.stringify(result)}`);
-      return res.status(result.code || 500).send(result);
+      return res.status(result.code || 404).send(result);
     }
 
     logger.info(`DELETE /usuario - ${JSON.stringify(result)}`);
@@ -80,18 +80,14 @@ async function updateUsuario(req, res, next) {
   try {
     const usuario = req.body;    
     
-    if (
-      !usuario.nome ||
-      !usuario.email ||
-      !usuario.active 
-    ) {
+    if (!usuario.email) {
       return res.status(400).json({ message: "Requisição inválida. Verifique os campos obrigatórios." });
     }
    
     const result = await UsuarioService.updateUsuario(usuario);
     if (result.status === "erro") {
       logger.warn(`DELETE /usuario - ${JSON.stringify(result)}`);
-      return res.status(result.code || 500).send(result);
+      return res.status(result.code || 404).send(result);
     }
 
     logger.info(`PUT /usuario - ${JSON.stringify(result)}`);

@@ -4,37 +4,20 @@ import genericoService from "../services/auth.service.js";
 async function createUsuario(usuario) {
   const conn = await connect();
   try {
-    let [row] = await conn.query("SELECT 1 FROM usuario WHERE email = ?", [
-      usuario.email,
-    ]);
+    const sql =
+      "INSERT INTO usuario ( nome, senha, email, active ) values ( ?, ?, ?, ? ) ";
+    const values = [usuario.nome, usuario.senha, usuario.email, usuario.active];
 
-    // verifica se foi retornado algum usuário com aquele nome
-    if (row.length === 0) {
-      const sql =
-        "INSERT INTO usuario ( nome, senha, email, active ) " +
-        "values ( ?, ?, ?, ? ) ";
-
-      const values = [
-        usuario.nome,
-        usuario.senha,
-        usuario.email,
-        usuario.active,
-      ];
-
-      // Efetua a transação no banco de dados
-      [row] = await conn.query(sql, values);
-      return {
-        status: "sucesso",
-        message: "Usuário cadastrado com sucesso!",
-        id: row.insertId,
-      };
-    } else {
-      return { status: "erro", message: "Usuário já cadastrado!" };
-    }
+    const [row] = await conn.query(sql, values);
+    return {
+      status: "sucesso",
+      message: "Usuário cadastrado com sucesso!",
+      id: row.insertId,
+    };
   } catch (error) {
     throw {
       status: 500,
-      message: "Erro ao acessar o banco de dados.",
+      message: "Erro ao acessar o banco de dados. (Code: 1)",
       error: error.message,
     };
   }
@@ -79,6 +62,23 @@ async function getUsuario(id) {
   }
 }
 
+async function getUsuarioByEmail(email) {
+  const conn = await connect();
+  try {
+    const [row] = await conn.query(
+      "SELECT email, active FROM usuario WHERE email = ? ",
+      [email]
+    );
+    return row;
+  } catch (error) {
+    throw {
+      status: 500,
+      message: "Erro ao acessar o banco de dados.",
+      error: error.message,
+    };
+  }
+}
+
 async function getUsuarioAuth(usuario) {
   const conn = await connect();
   try {
@@ -112,7 +112,7 @@ async function deleteUsuario(id) {
     const sql = "DELETE FROM usuario WHERE id = ?";
     const [row] = await conn.query(sql, [id]);
     console.log(row.affectedRows);
-    
+
     if (row.affectedRows === 0) {
       return {
         status: "erro",
@@ -134,11 +134,10 @@ async function deleteUsuario(id) {
 }
 
 async function updateUsuario(usuario) {
+  const conn = await connect();
   try {
-    const conn = await connect();
-
-    // Consulta para selecionar um usuário com base no ID ou email
-    const SELECT_USUARIO_QUERY = `SELECT * 
+    // Verifica se o usuário existe e está ativo
+    const SELECT_USUARIO_QUERY = `SELECT 1 
                                   FROM usuario 
                                   WHERE email = ?
                                   AND active != 'N'`;
@@ -146,37 +145,39 @@ async function updateUsuario(usuario) {
 
     if (rows.length === 0) {
       return {
-        status: "erro",       
-        message: `Não foi possível encontrar o usuário com o email ${usuario.email}.`,
+        status: "erro"
       };
     } else {
-      // Construa a consulta de atualização dinamicamente
-      let updateFields = [];
-      let values = [];
+      // Constrói a query de UPDATE dinamicamente
+      const camposPermitidos = ["nome", "senha", "active"];
+      const camposParaAtualizar = [];
+      const valores = [];
 
-      updateFields.push("nome = ?");
-      values.push(usuario.nome);
-
-      if (usuario.senha) {
-        updateFields.push("senha = ?");
-        values.push(usuario.senha);
+      for (const campo of camposPermitidos) {
+        if (usuario[campo] !== undefined) {
+          camposParaAtualizar.push(`${campo} = ?`);
+          valores.push(usuario[campo]);
+        }
       }
 
-      updateFields.push("active = ?");
-      values.push(usuario.active);
+      if (camposParaAtualizar.length === 0) {
+        return {
+          status: "null"
+        };
+      }
 
       const UPDATE_USUARIO_QUERY = `UPDATE usuario 
-                                    SET ${updateFields.join(", ")} 
+                                    SET ${camposParaAtualizar.join(", ")}
                                     WHERE email = ?`;
-      const [result] = await conn.query(UPDATE_USUARIO_QUERY, [
-        ...values,
-        usuario.email,
-      ]);
+
+      valores.push(usuario.email); // Adiciona o email para a condição WHERE 
+      
+      await conn.query(UPDATE_USUARIO_QUERY, valores);
 
       return {
-        status: "sucesso",
-        message: "Registro atualizado com sucesso!",
+        status: "sucesso"
       };
+
     }
   } catch (error) {
     throw {
@@ -194,4 +195,5 @@ export default {
   getUsuarioAuth,
   deleteUsuario,
   updateUsuario,
+  getUsuarioByEmail,
 };
