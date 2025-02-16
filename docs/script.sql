@@ -23,6 +23,9 @@ ADD COLUMN data_alteracao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_
 ALTER TABLE `usuario`
 MODIFY `data_criacao` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 MODIFY `data_alteracao` TIMESTAMP NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP;
+
+ALTER TABLE usuario
+ADD CONSTRAINT email_unico UNIQUE (email);
 -- ****************************** 15/02/2025 ****************************--
 
 

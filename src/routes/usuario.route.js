@@ -1,6 +1,6 @@
 import express from "express";
 import UsuarioController from "../controllers/usuario.controller.js";
-import genericoService from "../services/auth.service.js";
+import AuthController from "../services/auth.service.js";
 
 const router = express.Router();
 
@@ -23,11 +23,11 @@ const router = express.Router();
  *       409: { description: Conflict - Usuário já cadastrado }
  *       500: { description: Erro interno do servidor }
  */
-router.post("/", genericoService.auth, UsuarioController.createUsuario);
+router.post("/", AuthController.auth, UsuarioController.createUsuario);
 
 /**
  * @swagger
- * /api/v1/usuario:
+ * /api/v1/usuarios:
  *   get:
  *     summary: Retorna todos os usuários
  *     tags: [Usuários]
@@ -43,9 +43,7 @@ router.post("/", genericoService.auth, UsuarioController.createUsuario);
  *       401: { description: Não autorizado }
  *       500: { description: Erro interno do servidor }
  */
-router.get("/", genericoService.auth, UsuarioController.getUsuarios);
-
-//router.get("/nome", genericoService.auth, UsuarioController.getUsuarioAuth);
+router.get("/", AuthController.auth, UsuarioController.getUsuarios);
 
 /**
  * @swagger
@@ -76,7 +74,7 @@ router.get("/", genericoService.auth, UsuarioController.getUsuarios);
  *       scheme: bearer
  *       bearerFormat: JWT
  */
-router.get("/:id", genericoService.auth, UsuarioController.getUsuario);
+router.get("/:id", AuthController.auth, UsuarioController.getUsuario);
 
 /**
  * @swagger
@@ -109,7 +107,7 @@ router.get("/:id", genericoService.auth, UsuarioController.getUsuario);
  *       scheme: bearer
  *       bearerFormat: JWT
  */
-router.delete("/:id", genericoService.auth, UsuarioController.deleteUsuario);
+router.delete("/:id", AuthController.auth, UsuarioController.deleteUsuario);
 
 /**
  * @swagger
@@ -176,7 +174,7 @@ router.delete("/:id", genericoService.auth, UsuarioController.deleteUsuario);
  *       scheme: bearer
  *       bearerFormat: JWT
  */
-router.put("/", genericoService.auth, UsuarioController.updateUsuario);
+router.put("/", AuthController.auth, UsuarioController.updateUsuario);
 
 export default router;
 

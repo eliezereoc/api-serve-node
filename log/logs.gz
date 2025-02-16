@@ -890,3 +890,26 @@
 2025-02-16T01:52:13.518Z [log_api] warn DELETE /usuario - {"status":"erro","message":"Nenhum campo para atualizar."}
 2025-02-16T01:52:30.153Z [log_api] info PUT /usuario - Usuário com e-mail lucas@lucas.com foi alterado com sucesso.
 2025-02-16T01:52:30.153Z [log_api] info PUT /usuario - {"status":"sucesso","message":"Usuário foi alterado com sucesso."}
+2025-02-16T01:57:08.426Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T01:57:08.450Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T01:59:54.906Z [log_api] info POST /usuario - "Faça o update"
+2025-02-16T02:04:51.999Z [log_api] info GET /usuarios - [{"id":1,"nome":"eliezer","email":"eliezeroc@gmail.com","active":"S","data_criacao":"2024-09-12T03:00:00.000Z","data_alteracao":"2024-09-13T03:37:39.000Z"},{"id":21,"nome":"João","email":"joao@joao.com23","active":"S","data_criacao":null,"data_alteracao":"2024-11-18T00:26:11.000Z"},{"id":27,"nome":"João","email":"joao@joao.com24","active":"S","data_criacao":null,"data_alteracao":"2024-11-18T00:44:57.000Z"},{"id":29,"nome":"Pedro","email":"pedro@pedro.com","active":"S","data_criacao":null,"data_alteracao":"2025-02-16T00:24:05.000Z"},{"id":30,"nome":"Lucas Nascimento de Oliveira","email":"lucas@lucas.com","active":"S","data_criacao":"2025-02-16T01:11:48.000Z","data_alteracao":"2025-02-16T01:52:30.000Z"}]
+2025-02-16T02:05:23.738Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T02:05:23.778Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T02:07:33.149Z [log_api] info PUT /usuario - Usuário com e-mail pedro@pedro.com foi alterado com sucesso.
+2025-02-16T02:07:33.150Z [log_api] info PUT /usuario - {"status":"sucesso","message":"Usuário foi alterado com sucesso."}
+2025-02-16T02:08:02.541Z [log_api] info GET /usuario: [{"id":29,"nome":"Pedro Paulo da Silva","email":"pedro@pedro.com","active":"S","data_criacao":null,"data_alteracao":"2025-02-16T02:07:33.000Z"}]
+2025-02-16T02:08:33.676Z [log_api] warn DELETE /usuario - Usuário com ID 100 não encontrado.
+2025-02-16T02:08:33.677Z [log_api] warn DELETE /usuario - {"status":"erro","code":404,"message":"Usuário com ID 100 não encontrado."}
+2025-02-16T02:08:41.674Z [log_api] info DELETE /usuario - Usuário com ID 29 foi excluído com sucesso.
+2025-02-16T02:08:41.675Z [log_api] info DELETE /usuario - {"status":"sucesso","message":"DELETE /usuario - Usuário com ID 29 foi excluído com sucesso."}
+2025-02-16T02:11:54.211Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T02:11:54.233Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T02:12:00.739Z [log_api] warn GET /usuario - ID: 28 não encontrado
+2025-02-16T02:12:08.720Z [log_api] info POST /usuario - "Faça o update"
+2025-02-16T02:12:14.192Z [log_api] warn DELETE /usuario - Usuário com ID 100 não encontrado.
+2025-02-16T02:12:14.193Z [log_api] warn DELETE /usuario - {"status":"erro","code":404,"message":"Usuário com ID 100 não encontrado."}
+2025-02-16T02:12:27.631Z [log_api] info PUT /usuario - Usuário com e-mail lucas@lucas.com foi alterado com sucesso.
+2025-02-16T02:12:27.631Z [log_api] info PUT /usuario - {"status":"sucesso","message":"Usuário foi alterado com sucesso."}
+2025-02-16T02:13:01.205Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T02:13:01.230Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
