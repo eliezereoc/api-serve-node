@@ -1,4 +1,4 @@
-import usuarioService from "../services/usuario.service.js";
+import autorizacaoSevice from "../services/autorizacao.service.js";
 import AuthController from "../services/auth.service.js";
 
 async function verificaUsuario(req, res, next) {
@@ -7,10 +7,10 @@ async function verificaUsuario(req, res, next) {
       return res.status(400).send({ message: "Informe usuário e senha!" });
 
     const usuario = { usuario: req.body.usuario, senha: req.body.senha };        
-    const verifica = await usuarioService.getUsuarioAuth(usuario);
+    const verifica = await autorizacaoSevice.getUsuarioAuth(usuario);
 
     if (verifica.status === "erro") return res.status(401).send(verifica);
-
+ 
     const token = await AuthController.criarToken(verifica.usuario);
 
     if (token !== "" && token !== undefined)

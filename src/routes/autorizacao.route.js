@@ -18,7 +18,7 @@ const router = express.Router();
  *             type: object
  *             properties:
  *               usuario: { type: string, example: 'john.doe' }
- *               senha: { type: string, example: 'senha123' }
+ *               senha: { type: string, example: 'YWRtaW4=' }
  *     responses:
  *       200:
  *         description: Token obtido com sucesso

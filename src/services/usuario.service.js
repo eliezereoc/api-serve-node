@@ -1,27 +1,30 @@
 import UsuarioRepository from "../repositories/usuario.repository.js";
+import bcrypt from "bcrypt";
 
 async function createUsuario(usuario) {
   const [emailExiste] = await UsuarioRepository.getUsuarioByEmail(usuario.email);
   const [usuarioExiste] = await UsuarioRepository.getUsuarioByUsuario(usuario.usuario);
 
-  const usuarioInativo = (user) => user?.active === 'N';
+  const usuarioInativo = (user) => user?.active === 'N';// Verifica se o usuário está inativo
 
-
-  if (emailExiste?.email && emailExiste.active === 'S'){     
+  if (emailExiste?.email && emailExiste.active === 'S'){// Verifica se o e-mail já existe     
     logger.error(`E-mail ${emailExiste?.email } já cadastrado.`);
     return { status: "erro", code: 409, message: `E-mail já está em usu.` };
   }
 
-  if (usuarioExiste?.usuario && usuarioExiste.active === 'S'){
+  if (usuarioExiste?.usuario && usuarioExiste.active === 'S'){// Verifica se o usuário já existe
     logger.error(`Usuário ${usuarioExiste.usuario} já cadastrado.`);
     return { status: "erro", code: 409, message: `Usuário já está em usu.` };
   }
 
+  // Decodifica a senha e cria o hash
+  const senhaDecodificada = Buffer.from(usuario.senha, "base64").toString("utf-8");
+  const senhaHash = await bcrypt.hash(senhaDecodificada, 10);
+  usuario.senha = senhaHash;
+
   // Verifica se o email ou o usuário existem, mas estão inativos
-  if (usuarioInativo(emailExiste) || usuarioInativo(usuarioExiste)) { 
-    // Adiciona o campo active antes de criar o usuário
-    
-    usuario.active = 'S';
+  if (usuarioInativo(emailExiste) || usuarioInativo(usuarioExiste)) {     
+    usuario.active = 'S';// Adiciona o campo active antes de criar o usuário   
 
     const result = await UsuarioRepository.updateUsuario(usuario, "N");
     if (result.status === 'erro') {
@@ -55,10 +58,6 @@ async function getUsuarios() {
 
 async function getUsuario(id) {
   return await UsuarioRepository.getUsuario(id);
-}
-
-async function getUsuarioAuth(info) {
-  return await UsuarioRepository.getUsuarioAuth(info);
 }
 
 async function deleteUsuario(id, authenticatedUserId) {
@@ -112,8 +111,7 @@ async function updateUsuario(usuario) {
 export default {
   createUsuario,
   getUsuarios,
-  getUsuario,
-  getUsuarioAuth,
+  getUsuario, 
   deleteUsuario,
   updateUsuario  
 };

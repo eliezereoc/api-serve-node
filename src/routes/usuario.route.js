@@ -16,7 +16,7 @@ const router = express.Router();
  *       required: true
  *       content:
  *         application/json:
- *           schema: { type: object, properties: { nome: { type: string, example: "John Doe" }, email: { type: string, example: "Johndoe@Johndoe.com" }, senha: { type: string, example: "senha123" }, usuario: { type: string, example: "john.doe" } } }
+ *           schema: { type: object, properties: { nome: { type: string, example: "John Doe" }, email: { type: string, example: "Johndoe@Johndoe.com" }, senha: { type: string, example: "YWRtaW4=" }, usuario: { type: string, example: "john.doe" } } }
  *     responses:
  *       200: { description: Usuário criado com sucesso, content: { application/json: { schema: { type: object, properties: { status: { type: string, example: "sucesso" }, message: { type: string, example: "Usuário cadastrado com sucesso!" } } } } } }
  *       401: { description: Não autorizado }

@@ -1,8 +1,8 @@
 import jwt from "jsonwebtoken";
 
  // Função para cadastro do token
-async function criarToken(user) {
-  const usuario = user.shift(); //transformar o array em um único objeto
+async function criarToken(usuario) {
+  //const usuario = user.shift(); //transformar o array em um único objeto
 
   // Payload do token
   const payload = {

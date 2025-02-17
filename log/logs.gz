@@ -1312,3 +1312,250 @@
 2025-02-16T20:34:51.603Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
 2025-02-16T20:45:00.621Z [log_api] info API Backend iniciada com sucesso na porta 3000!
 2025-02-16T20:45:00.645Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T20:50:47.741Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T20:50:47.765Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T20:50:50.043Z [log_api] error POST  - Cannot read properties of undefined (reading 'status')
+2025-02-16T20:51:58.053Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-16T20:51:58.080Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-16T20:51:59.751Z [log_api] error POST  - Cannot read properties of undefined (reading 'status')
+2025-02-17T01:34:27.843Z [log_api] error POST  - Cannot read properties of undefined (reading 'status')
+2025-02-17T01:35:04.562Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T01:35:04.595Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T01:35:05.419Z [log_api] error POST  - Cannot read properties of undefined (reading 'status')
+2025-02-17T01:35:08.333Z [log_api] error POST  - Cannot read properties of undefined (reading 'status')
+2025-02-17T01:42:07.101Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T01:42:07.128Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T01:42:29.257Z [log_api] info POST /usuario - {"status":"sucesso","code":200,"message":"Usuário cadastrado com sucesso!"}
+2025-02-17T01:43:42.698Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T01:43:42.721Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T01:43:45.568Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T01:43:45.591Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T01:46:47.714Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T01:46:47.734Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T01:46:51.996Z [log_api] error E-mail lucas@n.oliveira2017.com já cadastrado.
+2025-02-17T01:46:51.997Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"E-mail já está em usu."}
+2025-02-17T01:47:12.580Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T01:47:12.601Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T01:47:19.777Z [log_api] error E-mail lucas@n.oliveira2017.com já cadastrado.
+2025-02-17T01:47:19.778Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"E-mail já está em usu."}
+2025-02-17T01:56:00.708Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T01:56:00.730Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T01:58:33.105Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T01:58:33.131Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T01:58:54.527Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T01:58:54.552Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T01:59:14.374Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T01:59:14.397Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:00:23.938Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:00:23.964Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:00:43.419Z [log_api] error E-mail lucas@n.oliveira2017.com já cadastrado.
+2025-02-17T02:00:43.420Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"E-mail já está em usu."}
+2025-02-17T02:01:22.521Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:01:22.542Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:02:25.366Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:02:25.394Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:02:28.703Z [log_api] error E-mail lucas@n.oliveira2017.com já cadastrado.
+2025-02-17T02:02:28.703Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"E-mail já está em usu."}
+2025-02-17T02:02:33.492Z [log_api] error E-mail lucas@n.oliveira2017.com já cadastrado.
+2025-02-17T02:02:33.493Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"E-mail já está em usu."}
+2025-02-17T02:02:38.423Z [log_api] error E-mail lucas@n.oliveira2017.com já cadastrado.
+2025-02-17T02:02:38.424Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"E-mail já está em usu."}
+2025-02-17T02:02:53.070Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:02:53.092Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:02:56.837Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:02:56.865Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:02:58.175Z [log_api] error E-mail lucas@n.oliveira2017.com já cadastrado.
+2025-02-17T02:02:58.175Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"E-mail já está em usu."}
+2025-02-17T02:02:59.868Z [log_api] error E-mail lucas@n.oliveira2017.com já cadastrado.
+2025-02-17T02:02:59.868Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"E-mail já está em usu."}
+2025-02-17T02:03:05.694Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:03:05.717Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:03:07.300Z [log_api] error E-mail lucas@n.oliveira2017.com já cadastrado.
+2025-02-17T02:03:07.300Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"E-mail já está em usu."}
+2025-02-17T02:04:14.803Z [log_api] info POST /usuario - {"status":"sucesso","code":200,"message":"Usuário cadastrado com sucesso!"}
+2025-02-17T02:06:04.578Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:06:04.603Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:06:37.934Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:06:37.965Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:07:41.327Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:07:41.350Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:12:05.164Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:12:05.200Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:12:06.325Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'shift')
+2025-02-17T02:12:12.660Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:12:12.690Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:12:33.022Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:12:33.047Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:15:57.294Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:15:57.331Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:15:58.504Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:15:58.528Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:16:00.819Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:16:00.841Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:16:39.348Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:16:39.383Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:27:56.588Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:27:56.621Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:28:39.610Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:28:39.640Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:28:51.621Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:28:51.646Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:32:36.548Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:32:36.571Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:32:39.511Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-02-17T02:33:57.728Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:33:57.749Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:34:48.479Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:34:48.506Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:35:05.924Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:35:05.953Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:35:06.122Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:35:19.708Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:35:19.730Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:35:20.675Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:35:58.516Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:35:58.540Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:36:02.753Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:36:11.829Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:36:11.868Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:36:13.752Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:36:20.611Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:36:20.633Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:36:21.673Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:36:33.558Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:36:33.581Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:36:34.827Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:38:06.198Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:38:06.226Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:38:14.653Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:38:14.673Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:38:18.500Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:38:36.693Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:39:34.149Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:39:34.179Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:39:48.025Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:39:48.054Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:39:49.900Z [log_api] error API Backend - Erro - [object Object]
+2025-02-17T02:40:06.179Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:40:06.203Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:40:11.206Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:42:35.084Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:42:35.111Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:42:42.223Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:42:42.249Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:42:44.045Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:43:15.168Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:43:15.190Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:43:30.017Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:43:30.041Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:43:37.001Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:43:51.208Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:43:51.236Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:43:52.240Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:44:13.562Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:44:13.593Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:44:14.626Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:44:32.670Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:44:32.692Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:44:59.180Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:46:02.229Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:46:34.198Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:46:34.233Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:46:35.837Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:47:07.056Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:47:07.085Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:47:09.950Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:47:32.270Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:47:32.297Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:47:34.845Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:47:40.656Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:47:49.529Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:48:10.354Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:48:10.383Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:48:11.295Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:48:19.745Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:49:01.268Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:49:04.108Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:49:04.131Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:49:05.629Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:49:47.893Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:49:47.916Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:49:50.302Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:50:19.489Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:50:30.837Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:50:36.346Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:50:42.138Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:50:48.791Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:50:57.640Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:51:02.034Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:52:32.034Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:52:32.064Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:52:34.275Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:52:41.963Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-02-17T02:52:45.946Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:52:50.753Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-02-17T02:52:54.382Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:53:29.933Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:53:29.955Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:54:45.386Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:54:45.418Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:54:46.989Z [log_api] error API Backend - Erro - TypeError: Cannot read properties of undefined (reading 'status')
+2025-02-17T02:54:57.306Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-02-17T02:55:24.152Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:55:24.175Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:55:45.071Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:55:45.098Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:55:56.088Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:55:56.117Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:55:57.737Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-02-17T02:56:08.765Z [log_api] error API Backend - Erro - TypeError: user.shift is not a function
+2025-02-17T02:56:17.094Z [log_api] error API Backend - Erro - TypeError: user.shift is not a function
+2025-02-17T02:56:38.217Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:56:38.241Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:56:39.419Z [log_api] error API Backend - Erro - TypeError: user.shift is not a function
+2025-02-17T02:57:16.107Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:57:16.140Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:57:18.974Z [log_api] error API Backend - Erro - TypeError: user.shift is not a function
+2025-02-17T02:57:49.194Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:57:49.219Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:57:50.564Z [log_api] error API Backend - Erro - TypeError: user.shift is not a function
+2025-02-17T02:58:47.706Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:58:47.747Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:58:48.913Z [log_api] error API Backend - Erro - TypeError: user.shift is not a function
+2025-02-17T02:59:14.911Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:59:14.938Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:59:16.375Z [log_api] error API Backend - Erro - TypeError: user.shift is not a function
+2025-02-17T02:59:31.239Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T02:59:31.262Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T02:59:32.923Z [log_api] error API Backend - Erro - TypeError: user.shift is not a function
+2025-02-17T03:01:36.025Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T03:01:36.058Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T03:01:52.677Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T03:01:52.703Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T03:01:54.440Z [log_api] error API Backend - Erro - TypeError: user.shift is not a function
+2025-02-17T03:02:01.832Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T03:02:01.858Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T03:03:30.409Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T03:03:30.432Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T03:03:43.420Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T03:03:43.444Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T03:04:00.443Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T03:04:00.468Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T03:04:02.486Z [log_api] error API Backend - Erro - TypeError: user.shift is not a function
+2025-02-17T03:05:15.346Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T03:05:15.371Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T03:05:18.123Z [log_api] error API Backend - Erro - TypeError: user.shift is not a function
+2025-02-17T03:05:51.682Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T03:05:51.707Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T03:06:55.648Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T03:06:55.675Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T03:06:58.826Z [log_api] error E-mail lucas@n.oliveira2017.com já cadastrado.
+2025-02-17T03:06:58.826Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"E-mail já está em usu."}
+2025-02-17T03:07:18.024Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-02-17T03:08:11.396Z [log_api] info POST /usuario - {"status":"sucesso","code":200,"message":"Usuário cadastrado com sucesso!"}
+2025-02-17T03:08:28.567Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T03:08:28.591Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T03:08:58.622Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T03:08:58.644Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-02-17T03:09:25.592Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-02-17T03:09:25.616Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
