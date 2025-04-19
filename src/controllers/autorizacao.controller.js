@@ -4,7 +4,7 @@ import AuthController from "../services/auth.service.js";
 async function verificaUsuario(req, res, next) {
   try {  
     if (req.body.usuario === undefined || req.body.senha === undefined)
-      return res.status(400).send({ message: "Informe usuário e senha!" });
+      return res.status(400).send({ message: "Campos usuário e senha são obrigatorios!" });
 
     const usuario = { usuario: req.body.usuario, senha: req.body.senha };        
     const verifica = await autorizacaoSevice.getUsuarioAuth(usuario);

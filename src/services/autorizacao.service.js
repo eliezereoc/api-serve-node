@@ -2,7 +2,6 @@ import autorizacaoRepository from "../repositories/autorizacao.repository.js";
 import bcrypt from "bcrypt";
  
 async function getUsuarioAuth(usuario) {
-
   const result = await autorizacaoRepository.getUsuarioAuth(usuario);
 
   if (result.status === "erro") {

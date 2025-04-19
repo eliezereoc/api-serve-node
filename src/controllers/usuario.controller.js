@@ -98,9 +98,7 @@ async function updateUsuario(req, res, next) {
 }
 
 async function getUsuarioAuth(req, res, next) {
-  try {
-    console.log("entrou aqui");
-    console.log(req.query);
+  try { 
     const usuario = await UsuarioService.getUsuarioAuth(req.query);
 
     res.send(usuario);
