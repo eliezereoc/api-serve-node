@@ -36,12 +36,12 @@ A API foi construída seguindo boas práticas:
 ## 📁 Estrutura do projeto
 
 /src
-/controllers
-/services
-/repositories
-/middlewares
-/routes
-/database
+├── controllers
+├── services
+├── repositories
+├── middlewares
+├── routes
+├── database
 .env.example
 server.js
 
