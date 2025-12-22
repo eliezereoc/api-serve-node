@@ -25,6 +25,7 @@ A API foi construída seguindo boas práticas:
 - Node.js  
 - Express  
 - MySQL / mysql2  
+- Knex.js (Database Migrations)  
 - JWT (jsonwebtoken)  
 - bcrypt  
 - dotenv  
@@ -307,6 +308,26 @@ Configure as variáveis no arquivo `.env`:
 **Nota**: O arquivo `env.txt` é um backup da configuração anterior. Use `.env.example` como referência.
 
 ### 4. Configurar o banco de dados
+
+**Opção A: Usando Migrations (Recomendado)**
+
+Execute as migrations para criar automaticamente as tabelas do banco de dados:
+
+```bash
+# Para ambiente de STAGING
+npm run migrate:staging
+
+# Para ambiente de PRODUCTION
+npm run migrate:production
+```
+
+As migrations criam automaticamente:
+- Tabela `usuario` com todos os campos necessários
+- Usuário admin padrão (usuário: `admin.admin`, senha: `admin`)
+- Índices e constraints
+
+**Opção B: Usando scripts SQL manuais**
+
 Execute os scripts SQL localizados em `docs/` para criar o banco de dados:
 ```bash
 docs/script.sql
@@ -639,9 +660,129 @@ A documentação Swagger é configurada em `swagger.js` com:
 
 ## 🗄️ Banco de Dados
 
-O projeto utiliza **MySQL** como banco de dados relacional.  
-Scripts SQL para criação das tabelas estão disponíveis em `docs/script.sql`.  
-Backups do banco de dados estão em `docs/backupBd/`.
+O projeto usa **MySQL** como banco de dados relacional.
+
+### Gerenciamento com Migrations
+
+O projeto utiliza **Knex.js** para gerenciar migrations do banco de dados, permitindo:
+- ✅ Controle de versionamento do schema
+- ✅ Rastreamento de alterações aplicadas
+- ✅ Rollback de mudanças quando necessário
+- ✅ Sincronização entre ambientes (staging/production)
+
+### Comandos de Migration
+
+#### Executar migrations pendentes
+```bash
+# Ambiente de STAGING (homologação)
+npm run migrate:staging
+
+# Ambiente de PRODUCTION (produção)
+npm run migrate:production
+```
+
+#### Reverter última migration
+```bash
+# Staging
+npm run migrate:rollback:staging
+
+# Production
+npm run migrate:rollback:production
+```
+
+#### Verificar status das migrations
+```bash
+# Ver quais migrations foram aplicadas
+npm run migrate:status:staging
+npm run migrate:status:production
+```
+
+#### Criar nova migration
+```bash
+npm run migrate:make nome_da_migration
+```
+
+Exemplo:
+```bash
+npm run migrate:make add_phone_to_usuario
+```
+
+Isso criará um novo arquivo em `migrations/` com o timestamp:
+```
+migrations/20251222120000_add_phone_to_usuario.js
+```
+
+### Estrutura de uma Migration
+
+```javascript
+/**
+ * @param { import("knex").Knex } knex
+ * @returns { Promise<void> }
+ */
+export async function up(knex) {
+  // Código para aplicar a migration (criar/alterar tabelas)
+  await knex.schema.alterTable('usuario', (table) => {
+    table.string('telefone', 20).nullable();
+  });
+}
+
+/**
+ * @param { import("knex").Knex } knex
+ * @returns { Promise<void> }
+ */
+export async function down(knex) {
+  // Código para reverter a migration (rollback)
+  await knex.schema.alterTable('usuario', (table) => {
+    table.dropColumn('telefone');
+  });
+}
+```
+
+### Migrations Disponíveis
+
+#### `20240911000000_create_usuario_table.js`
+- Cria tabela `usuario` com campos:
+  - `id` (auto-incremento, chave primária)
+  - `nome` (VARCHAR 150)
+  - `email` (VARCHAR 150, único)
+  - `senha` (VARCHAR 150, hash bcrypt)
+  - `usuario` (VARCHAR 50, único)
+  - `active` (CHAR 1, padrão 'S')
+  - `data_criacao` (TIMESTAMP)
+  - `data_alteracao` (TIMESTAMP, nullable)
+- Insere usuário admin padrão
+
+### Scripts SQL Alternativos
+
+Scripts SQL manuais ainda estão disponíveis em:
+- `docs/script.sql` - Scripts de criação e alteração
+- `docs/backupBd/` - Backups do banco de dados
+
+### Configuração de Conexão
+
+As configurações do banco são definidas no arquivo `knexfile.js` e utilizam variáveis de ambiente do `.env`:
+
+**Staging (Homologação):**
+- `HOST_BD_STAGING`
+- `PORT_BD_STAGING`
+- `USER_BD_STAGING`
+- `PASSWORD_BD_STAGING`
+- `DATABASE_NAME_STAGING`
+
+**Production (Produção):**
+- `HOST_BD_PRODUCTION`
+- `PORT_BD_PRODUCTION`
+- `USER_BD_PRODUCTION`
+- `PASSWORD_BD_PRODUCTION`
+- `DATABASE_NAME_PRODUCTION`
+
+### Boas Práticas com Migrations
+
+1. **Sempre teste em staging primeiro** antes de aplicar em production
+2. **Nunca edite migrations já aplicadas** - crie uma nova migration para correções
+3. **Inclua sempre o método `down()`** para permitir rollback
+4. **Use transações** para operações complexas
+5. **Documente alterações significativas** nos comentários da migration
 
 ---
 
@@ -703,6 +844,7 @@ The API was built following best practices:
 - Node.js  
 - Express  
 - MySQL / mysql2  
+- Knex.js (Database Migrations)  
 - JWT (jsonwebtoken)  
 - bcrypt  
 - dotenv  
@@ -985,6 +1127,26 @@ Configure the variables in the `.env` file:
 **Note**: The `env.txt` file is a backup of the previous configuration. Use `.env.example` as a reference.
 
 ### 4. Configure the database
+
+**Option A: Using Migrations (Recommended)**
+
+Run migrations to automatically create database tables:
+
+```bash
+# For STAGING environment
+npm run migrate:staging
+
+# For PRODUCTION environment
+npm run migrate:production
+```
+
+Migrations automatically create:
+- `usuario` table with all necessary fields
+- Default admin user (username: `admin.admin`, password: `admin`)
+- Indexes and constraints
+
+**Option B: Using manual SQL scripts**
+
 Execute the SQL scripts located in `docs/` to create the database:
 ```bash
 docs/script.sql
@@ -1315,11 +1477,201 @@ Swagger documentation is configured in `swagger.js` with:
 
 ---
 
-## 🗄️ Database
+## 🗄️ Banco de Dados
 
-The project uses **MySQL** as a relational database.  
-SQL scripts for creating tables are available in `docs/script.sql`.  
-Database backups are in `docs/backupBd/`.
+O projeto usa **MySQL** como banco de dados relacional.
+
+### Gerenciamento com Migrations
+
+O projeto utiliza **Knex.js** para gerenciar migrations do banco de dados, permitindo:
+- ✅ Controle de versionamento do schema
+- ✅ Rastreamento de alterações aplicadas
+- ✅ Rollback de mudanças quando necessário
+- ✅ Sincronização entre ambientes (staging/production)
+
+### Comandos de Migration
+
+#### Executar migrations pendentes
+```bash
+# Ambiente de STAGING (homologação)
+npm run migrate:staging
+
+# Ambiente de PRODUCTION (produção)
+npm run migrate:production
+```
+
+#### Reverter última migration
+```bash
+# Staging
+npm run migrate:rollback:staging
+
+# Production
+npm run migrate:rollback:production
+```
+
+#### Verificar status das migrations
+```bash
+# Ver quais migrations foram aplicadas
+npm run migrate:status:staging
+npm run migrate:status:production
+```
+
+#### Criar nova migration
+```bash
+npm run migrate:make nome_da_migration
+```
+
+Exemplo:
+```bash
+npm run migrate:make add_phone_to_usuario
+```
+
+Isso criará um novo arquivo em `migrations/` com o timestamp:
+```
+migrations/20251222120000_add_phone_to_usuario.js
+```
+
+### Estrutura de uma Migration
+
+```javascript
+/**
+ * @param { import("knex").Knex } knex
+ * @returns { Promise<void> }
+ */
+export async function up(knex) {
+  // Código para aplicar a migration (criar/alterar tabelas)
+  await knex.schema.alterTable('usuario', (table) => {
+    table.string('telefone', 20).nullable();
+  });
+}
+
+/**
+ * @param { import("knex").Knex } knex
+ * @returns { Promise<void> }
+ */
+export async function down(knex) {
+  // Código para reverter a migration (rollback)
+  await knex.schema.alterTable('usuario', (table) => {
+    table.dropColumn('telefone');
+  });
+}
+```
+
+### Migrations Disponíveis
+
+#### `20240911000000_create_usuario_table.js`
+- Cria tabela `usuario` com campos:
+  - `id` (auto-incremento, chave primária)
+  - `nome` (VARCHAR 150)
+  - `email` (VARCHAR 150, único)
+  - `senha` (VARCHAR 150, hash bcrypt)
+  - `usuario` (VARCHAR 50, único)
+  - `active` (CHAR 1, padrão 'S')
+  - `data_criacao` (TIMESTAMP)
+  - `data_alteracao` (TIMESTAMP, nullable)
+- Insere usuário admin padrão
+
+### Scripts SQL Alternativos
+
+Scripts SQL manuais ainda estão disponíveis em:
+- `docs/script.sql` - Scripts de criação e alteração
+- `docs/backupBd/` - Backups do banco de dados
+
+### Configuração de Conexão
+
+As configurações do banco são definidas no arquivo `knexfile.js` e utilizam variáveis de ambiente do `.env`:
+
+**Staging (Homologação):**
+- `HOST_BD_STAGING`
+- `PORT_BD_STAGING`
+- `USER_BD_STAGING`
+- `PASSWORD_BD_STAGING`
+- `DATABASE_NAME_STAGING`
+
+**Production (Produção):**
+- `HOST_BD_PRODUCTION`
+- `PORT_BD_PRODUCTION`
+- `USER_BD_PRODUCTION`
+- `PASSWORD_BD_PRODUCTION`
+- `DATABASE_NAME_PRODUCTION`
+
+### Boas Práticas com Migrations
+
+1. **Sempre teste em staging primeiro** antes de aplicar em production
+2. **Nunca edite migrations já aplicadas** - crie uma nova migration para correções
+3. **Inclua sempre o método `down()`** para permitir rollback
+4. **Use transações** para operações complexas
+5. **Documente alterações significativas** nos comentários da migration
+
+---
+
+## 🔒 Segurança
+
+- **JWT** para autenticação e autorização
+- **bcrypt** para hash de senhas
+- **Helmet** para headers de segurança HTTP
+- **CORS** configurado
+- **express-rate-limit** para proteção contra ataques de força bruta
+
+---
+
+## 📝 Logs
+
+O sistema utiliza **Winston** para gerenciamento de logs.  
+Os logs são salvos na pasta `log/` conforme configuração no arquivo `.env`.
+
+---
+
+## 👤 Autor
+
+**Eliezer de Oliveira**
+
+---
+
+## 📄 Licença
+
+ISC
+
+---
+---
+
+# 🇺🇸 Node.js API Server  
+REST API with JWT authentication, MySQL and organized architecture for scalable applications.
+
+## 🇺🇸 About the project
+
+This is a **complete REST API**, developed in **Node.js** with **JWT authentication**, validation, connection with **MySQL** database and an organized architecture, ready for use in real systems.
+
+The purpose of this project is to serve as a foundation for corporate applications, allowing:
+- User authentication and management  
+- Integration with external services  
+- Route and middleware standardization  
+- Layered organization (controllers, services, repositories)  
+- Easy expansion for new features  
+
+The API was built following best practices:
+- Clean and scalable structure  
+- Clear separation of responsibilities  
+- JWT tokens for authorization  
+- MySQL with environment variables  
+- Ready-to-use development scripts  
+
+---
+
+## 📦 Technologies used
+- Node.js  
+- Express  
+- MySQL / mysql2  
+- Knex.js (Database Migrations)  
+- JWT (jsonwebtoken)  
+- bcrypt  
+- dotenv  
+- Nodemon  
+- Jest (automated testing)  
+- Winston (logging)  
+- Swagger (documentation)  
+- Helmet (security)  
+- CORS  
 
 ---
 
@@ -1349,3 +1701,197 @@ Logs are saved in the `log/` folder according to the configuration in the `.env`
 ## 📄 License
 
 ISC
+
+---
+---
+
+# 🇺🇸 English Version
+
+---
+
+## 🗄️ Database
+
+The project uses **MySQL** as a relational database.
+
+### Migration Management
+
+The project uses **Knex.js** to manage database migrations, allowing:
+- ✅ Schema version control
+- ✅ Track applied changes
+- ✅ Rollback changes when needed
+- ✅ Synchronization between environments (staging/production)
+
+### Migration Commands
+
+#### Run pending migrations
+```bash
+# STAGING environment (development)
+npm run migrate:staging
+
+# PRODUCTION environment
+npm run migrate:production
+```
+
+#### Rollback last migration
+```bash
+# Staging
+npm run migrate:rollback:staging
+
+# Production
+npm run migrate:rollback:production
+```
+
+#### Check migration status
+```bash
+# See which migrations have been applied
+npm run migrate:status:staging
+npm run migrate:status:production
+```
+
+#### Create new migration
+```bash
+npm run migrate:make migration_name
+```
+
+Example:
+```bash
+npm run migrate:make add_phone_to_usuario
+```
+
+This will create a new file in `migrations/` with timestamp:
+```
+migrations/20251222120000_add_phone_to_usuario.js
+```
+
+### Migration Structure
+
+```javascript
+/**
+ * @param { import("knex").Knex } knex
+ * @returns { Promise<void> }
+ */
+export async function up(knex) {
+  // Code to apply migration (create/alter tables)
+  await knex.schema.alterTable('usuario', (table) => {
+    table.string('telefone', 20).nullable();
+  });
+}
+
+/**
+ * @param { import("knex").Knex } knex
+ * @returns { Promise<void> }
+ */
+export async function down(knex) {
+  // Code to revert migration (rollback)
+  await knex.schema.alterTable('usuario', (table) => {
+    table.dropColumn('telefone');
+  });
+}
+```
+
+### Available Migrations
+
+#### `20240911000000_create_usuario_table.js`
+- Creates `usuario` table with fields:
+  - `id` (auto-increment, primary key)
+  - `nome` (VARCHAR 150)
+  - `email` (VARCHAR 150, unique)
+  - `senha` (VARCHAR 150, bcrypt hash)
+  - `usuario` (VARCHAR 50, unique)
+  - `active` (CHAR 1, default 'S')
+  - `data_criacao` (TIMESTAMP)
+  - `data_alteracao` (TIMESTAMP, nullable)
+- Inserts default admin user
+
+### Alternative SQL Scripts
+
+Manual SQL scripts are still available at:
+- `docs/script.sql` - Creation and alteration scripts
+- `docs/backupBd/` - Database backups
+
+### Connection Configuration
+
+Database settings are defined in `knexfile.js` and use environment variables from `.env`:
+
+**Staging (Development):**
+- `HOST_BD_STAGING`
+- `PORT_BD_STAGING`
+- `USER_BD_STAGING`
+- `PASSWORD_BD_STAGING`
+- `DATABASE_NAME_STAGING`
+
+**Production:**
+- `HOST_BD_PRODUCTION`
+- `PORT_BD_PRODUCTION`
+- `USER_BD_PRODUCTION`
+- `PASSWORD_BD_PRODUCTION`
+- `DATABASE_NAME_PRODUCTION`
+
+### Migration Best Practices
+
+1. **Always test in staging first** before applying to production
+2. **Never edit already applied migrations** - create a new migration for fixes
+3. **Always include the `down()` method** to allow rollback
+4. **Use transactions** for complex operations
+5. **Document significant changes** in migration comments
+
+### Why Use Migrations?
+
+**Before (Manual SQL):**
+```sql
+-- Each developer runs SQL manually
+-- Hard to track what's been applied
+-- Risk of missing changes in production
+-- No rollback capability
+```
+
+**After (Knex Migrations):**
+```bash
+# One command applies all pending changes
+npm run migrate:staging
+
+# Easy rollback if something goes wrong
+npm run migrate:rollback:staging
+
+# See exactly what's been applied
+npm run migrate:status:staging
+```
+
+### Migration Workflow Example
+
+1. **Create new feature needing database change:**
+```bash
+npm run migrate:make add_user_roles
+```
+
+2. **Edit the generated migration file:**
+```javascript
+export async function up(knex) {
+  await knex.schema.alterTable('usuario', (table) => {
+    table.enum('role', ['admin', 'user', 'guest']).defaultTo('user');
+  });
+}
+
+export async function down(knex) {
+  await knex.schema.alterTable('usuario', (table) => {
+    table.dropColumn('role');
+  });
+}
+```
+
+3. **Test in staging:**
+```bash
+npm run migrate:staging
+```
+
+4. **If all good, apply to production:**
+```bash
+npm run migrate:production
+```
+
+5. **If something goes wrong, rollback:**
+```bash
+npm run migrate:rollback:staging
+```
+
+---
