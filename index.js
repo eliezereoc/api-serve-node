@@ -34,10 +34,10 @@ global.logger = winston.createLogger({
 
 const __dirname = path.resolve();
 
-// const limiter = rateLimit({
-//   windowMs: 15 * 60 * 1000, // 15 minutes
-//   max: 100, // limite de 100 solicitações por janela
-// });
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // limite de 100 solicitações por janela
+});
 
 const app = express();
 setupSwagger(app);
