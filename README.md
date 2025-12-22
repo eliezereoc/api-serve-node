@@ -81,18 +81,27 @@ Busca um usuário pelo ID.
 ### 1. Clonar o repositório
 ```bash
 git clone https://github.com/eliezereoc/api-serve-node
+```
 
 ### 2. Instalar as dependências
 ```bash
 npm install
+```
 
-### 3. Criar o arquivo
+### 3. Criar o arquivo .env
 ```bash
 cp .env.example .env
+```
 
 ### 4. Rodar o servidor
 ```bash
 npm run dev
+```
 
+Acesse a aplicação em:
 ```bash
 http://localhost:3000
+```
+
+
+
