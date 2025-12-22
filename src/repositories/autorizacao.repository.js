@@ -4,7 +4,7 @@ async function getUsuarioAuth(usuario) {
   const conn = await connect();
   try {
     const [row] = await conn.query("SELECT * FROM usuario WHERE usuario = ? LIMIT 1", [usuario.usuario]);    
-        
+            
     if (row.length > 0) {
       return row[0];
     }

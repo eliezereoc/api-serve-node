@@ -1647,3 +1647,58 @@
 2025-02-26T00:44:30.976Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
 2025-12-21T23:49:51.103Z [log_api] info API Backend iniciada com sucesso na porta 3000!
 2025-12-21T23:49:51.530Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-12-22T01:26:18.772Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-12-22T01:26:18.835Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-12-22T02:10:36.419Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-12-22T02:10:36.451Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-12-22T02:12:56.138Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-12-22T02:13:02.880Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-12-22T02:17:32.062Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-12-22T02:17:39.963Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-12-22T02:17:48.616Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-12-22T02:21:46.775Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-12-22T02:22:15.029Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-12-22T02:25:07.332Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-12-22T02:25:12.904Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-12-22T02:37:11.891Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-12-22T02:37:11.918Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-12-22T02:37:15.979Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-12-22T02:37:49.016Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-12-22T02:37:49.036Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-12-22T02:37:51.014Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-12-22T02:38:14.965Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-12-22T02:38:14.990Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-12-22T02:38:16.762Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-12-22T02:38:37.171Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-12-22T02:38:37.194Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-12-22T02:38:56.092Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-12-22T02:38:56.113Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-12-22T02:38:57.978Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-12-22T02:39:45.607Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-12-22T02:39:45.628Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-12-22T02:39:48.409Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-12-22T02:40:29.195Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-12-22T02:40:29.215Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-12-22T02:40:31.617Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-12-22T02:40:43.860Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-12-22T02:40:43.890Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-12-22T02:42:38.402Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-12-22T02:43:39.149Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-12-22T02:43:39.171Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-12-22T02:43:42.436Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-12-22T02:43:51.144Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-12-22T02:43:51.166Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-12-22T02:47:02.450Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-12-22T02:47:02.471Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-12-22T02:47:07.895Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-12-22T02:47:15.917Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-12-22T02:47:15.963Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-12-22T02:47:17.532Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-12-22T02:47:17.557Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-12-22T02:47:36.514Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-12-22T02:47:36.537Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-12-22T02:47:40.263Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-12-22T02:48:14.413Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-12-22T02:48:14.442Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-12-22T02:48:19.806Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-12-22T02:49:02.635Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.

@@ -2,6 +2,15 @@ import mysql from "mysql2/promise";
 import dotenv from "dotenv/config";
 
 async function connect() {
+  // Skip conexão real durante testes
+  if (process.env.NODE_ENV === "test") {
+    return {
+      execute: jest.fn().mockResolvedValue([[], []]),
+      query: jest.fn().mockResolvedValue([[], []]),
+      end: jest.fn().mockResolvedValue(undefined)
+    };
+  }
+
   if (global.connection && global.connection.state !== "disconnected")
     return global.connection;
 

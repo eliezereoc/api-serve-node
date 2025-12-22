@@ -328,10 +328,272 @@ http://localhost:3000/api-docs
 
 ---
 
-## 📚 Documentação Interativa
+## 🧪 Testes Automatizados
 
-A API possui documentação interativa usando **Swagger**, acessível em `/api-docs`. 
-Através dela você pode testar todos os endpoints diretamente no navegador.
+O projeto utiliza **Jest** para testes automatizados com suporte completo a ES Modules. Com **60 testes** implementados cobrindo services, controllers e autenticação.
+
+### 📊 Status dos Testes
+
+```
+Test Suites: 5 passed ✅
+Tests:       60 passed ✅
+Coverage:    56.32% do código
+```
+
+**Cobertura por módulo:**
+- **auth.service**: 100% ✅
+- **autorizacao.service**: 100% ✅
+- **autorizacao.controller**: 100% ✅
+- **usuario.service**: 89.28% ✅
+- **usuario.controller**: 89.28% ✅
+
+### Executar Testes
+
+#### Modo Watch (desenvolvimento)
+```bash
+npm test
+```
+Testes executam automaticamente ao salvar arquivos. Pressione `q` para sair.
+
+#### Rodar testes uma vez
+```bash
+npm test -- --no-watch --no-coverage
+```
+
+#### Apenas testes de um arquivo
+```bash
+npm test -- usuario.service.test.js
+```
+
+#### Com relatório de cobertura detalhado
+```bash
+npm test
+```
+(já incluído por padrão no script)
+
+### Estrutura de Testes
+
+Os testes estão organizados próximo aos arquivos que testam:
+```
+src/
+├── services/
+│   ├── auth.service.js
+│   ├── auth.service.test.js
+│   ├── autorizacao.service.js
+│   ├── autorizacao.service.test.js
+│   ├── usuario.service.js
+│   └── usuario.service.test.js
+├── controllers/
+│   ├── autorizacao.controller.js
+│   ├── autorizacao.controller.test.js
+│   ├── usuario.controller.js
+│   └── usuario.controller.test.js
+```
+
+### Testes Implementados
+
+#### AuthService (6 testes)
+- ✅ Criar token com payload correto
+- ✅ Usar algoritmo HS256 e expiração 1h
+- ✅ Verificar token com Bearer format
+- ✅ Armazenar dados do usuário em req.user
+- ✅ Retornar erro 401 para tokens inválidos
+- ✅ Validar JWT_SECRET do environment
+
+#### AutorizacaoService (4 testes)
+- ✅ Autenticar usuário com sucesso
+- ✅ Validar senha com bcrypt
+- ✅ Retornar erro quando usuário não existe
+- ✅ Retornar erro quando senha incorreta
+
+#### UsuarioService (17 testes)
+- ✅ Criar usuário com sucesso
+- ✅ Validar email duplicado
+- ✅ Validar usuário duplicado
+- ✅ Reativar usuário inativo
+- ✅ Hash de senha com bcrypt
+- ✅ Listar usuários
+- ✅ Buscar usuário por ID
+- ✅ Deletar usuário
+- ✅ Impedir autodeleta de conta
+- ✅ Atualizar usuário
+- ✅ Tratamento de erros de banco de dados
+
+#### AutorizacaoController (11 testes)
+- ✅ Autenticar e gerar token
+- ✅ Validar campos obrigatórios
+- ✅ Retornar erro 401 para autenticação inválida
+- ✅ Retornar erro quando token não é criado
+- ✅ Tratamento de exceções
+
+#### UsuarioController (16 testes)
+- ✅ Criar usuário com validação
+- ✅ Listar usuários
+- ✅ Buscar usuário específico
+- ✅ Deletar usuário
+- ✅ Atualizar usuário
+- ✅ Tratamento de erros HTTP
+- ✅ Validação de dados de entrada
+- ✅ Chamar middleware next() em exceções
+
+### Exemplo de Teste
+
+```javascript
+describe('UsuarioService', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+  it('deve criar um usuário com sucesso', async () => {
+    const usuario = {
+      usuario: 'testuser',
+      email: 'test@example.com',
+      senha: Buffer.from('senha123').toString('base64'),
+      nome: 'Test User'
+    };
+
+    UsuarioRepository.getUsuarioByEmail.mockResolvedValue([null]);
+    UsuarioRepository.getUsuarioByUsuario.mockResolvedValue([null]);
+    bcrypt.hash.mockResolvedValue('hashedPassword123');
+    UsuarioRepository.createUsuario.mockResolvedValue({ status: 'sucesso' });
+
+    const result = await UsuarioService.createUsuario(usuario);
+
+    expect(result.status).toBe('sucesso');
+    expect(result.code).toBe(200);
+    expect(UsuarioRepository.createUsuario).toHaveBeenCalled();
+  });
+});
+```
+
+### Cobertura de Código
+
+O Jest gera automaticamente relatório de cobertura mostrando:
+- **% Stmts** - Percentual de statements (linhas) executadas
+- **% Branch** - Percentual de branches (if/else) executados
+- **% Funcs** - Percentual de funções executadas
+- **% Lines** - Percentual de linhas cobertas
+
+Exemplo de relatório:
+```
+usuario.service.js | 89.28 | 82.14 | 100 | 89.09
+```
+= 89% do código está coberto por testes
+
+### Mocks Utilizados
+
+Os testes utilizam mocks para isolamento:
+- **UsuarioRepository** - Operações de banco de dados
+- **bcrypt** - Hash de senhas
+- **JWT** - Criação e verificação de tokens
+- **logger** - Logs globais
+- **mysql2/promise** - Conexão com BD (desabilitada em testes)
+
+### 💡 Boas Práticas Implementadas
+
+1. **Isolamento** - Cada teste é independente
+2. **Setup/Teardown** - `beforeEach()` limpa mocks
+3. **Nomes descritivos** - Testes explicam o que testam
+4. **Cobertura de casos extremos** - Erros, validações, exceções
+5. **Mocks apropriados** - Sem dependências reais (BD, APIs)
+
+### 🔧 Configuração
+
+A configuração do Jest está em `jest.config.js`:
+- ✅ Suporte a ES Modules
+- ✅ Babel transpilation automática
+- ✅ Cobertura automática
+- ✅ Timeout configurado para operações assíncronas
+
+---
+
+## 📚 Documentação Interativa com Swagger
+
+A API possui documentação interativa completa usando **Swagger UI**, permitindo visualizar e testar todos os endpoints diretamente no navegador.
+
+### 🌐 Acessar Documentação
+
+Após iniciar o servidor, acesse:
+```
+http://localhost:3000/api-docs
+```
+
+### 📋 Recursos Disponíveis
+
+A documentação Swagger inclui:
+
+#### ✅ Visualização Completa
+- Lista de todos os endpoints disponíveis
+- Métodos HTTP (GET, POST, PUT, DELETE)
+- Parâmetros necessários (body, query, params)
+- Exemplos de requisições e respostas
+- Códigos de status HTTP
+
+#### 🔐 Autenticação JWT
+- Botão "Authorize" para inserir token JWT
+- Formato: `Bearer {seu-token-aqui}`
+- Token válido por 1 hora após autenticação
+- Testa endpoints protegidos facilmente
+
+#### 🧪 Testar Endpoints
+
+1. **Autenticar** primeiro via `POST /api/v1/auth`:
+   ```json
+   {
+     "usuario": "seu-usuario",
+     "senha": "c2VuaGFCYXNlNjQ="
+   }
+   ```
+
+2. **Copiar token** da resposta
+
+3. **Clicar em "Authorize"** (cadeado no topo)
+
+4. **Inserir token** no formato: `Bearer {token}`
+
+5. **Testar endpoints** protegidos:
+   - GET /api/v1/usuario - Listar usuários
+   - POST /api/v1/usuario - Criar usuário
+   - PUT /api/v1/usuario - Atualizar usuário
+   - DELETE /api/v1/usuario/{id} - Deletar usuário
+
+### 📝 Endpoints Documentados
+
+#### Autenticação
+- `POST /api/v1/auth` - Gerar token JWT
+
+#### Usuários (Protegido 🔒)
+- `GET /api/v1/usuario` - Listar todos os usuários
+- `GET /api/v1/usuario/{id}` - Buscar usuário por ID
+- `POST /api/v1/usuario` - Criar novo usuário
+- `PUT /api/v1/usuario` - Atualizar usuário
+- `DELETE /api/v1/usuario/{id}` - Deletar usuário
+
+### 💡 Dicas de Uso
+
+**Senha em Base64:**
+- As senhas devem ser enviadas codificadas em Base64
+- Exemplo: `senha123` → `c2VuaGExMjM=`
+- Use: `echo -n "senha123" | base64` no terminal
+
+**Testar Respostas:**
+- Swagger mostra exemplos reais de respostas
+- Status codes: 200 (sucesso), 401 (não autorizado), 404 (não encontrado)
+- Mensagens de erro detalhadas
+
+**Validações:**
+- Campos obrigatórios marcados com `*`
+- Formato dos dados esperados
+- Restrições de tamanho e tipo
+
+### 🔧 Configuração
+
+A documentação Swagger é configurada em `swagger.js` com:
+- Informações do projeto
+- Versão da API
+- Servidor base URL
+- Schemas de dados
+- Exemplos de requisições
 
 ---
 
