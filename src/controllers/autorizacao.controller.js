@@ -13,8 +13,10 @@ async function verificaUsuario(req, res, next) {
  
     const token = await AuthController.criarToken(verifica.usuario);
 
-    if (token !== "" && token !== undefined)
+    if (token !== "" && token !== undefined) {
+      logger.info(`Token gerado com sucesso para o usuário ${usuario.usuario}`);
       return res.status(200).send({ access_token: token });
+    }
 
     return res.status(401).send({ message: "Falha na autenticação: token não encontrado"});
   } catch (error) {

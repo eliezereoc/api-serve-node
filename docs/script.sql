@@ -30,7 +30,8 @@ ADD CONSTRAINT email_unico UNIQUE (email);
 ALTER TABLE usuario
 ADD COLUMN usuario VARCHAR(50) NOT NULL UNIQUE;
 
-INSERT INTO usuario (nome, email, senha, usuario) VALUES ('eliezer', 'eliezeroc@gmail.com', 'admin', 'eliezer.oliveira'); 
+INSERT INTO usuario (nome, email, senha, active, usuario) 
+VALUES ('Admin', 'admin@admin.com', '$2b$10$WKSqg4.cu8E9MSMWfJt1S.NU8atk0rU51crKhRIbIX4K8YfviUrQy', 'S', 'admin.admin'); 
 
 ALTER TABLE usuario
 MODIFY email CHAR(150) NOT NULL;

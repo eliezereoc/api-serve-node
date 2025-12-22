@@ -11,7 +11,7 @@ async function getUsuarioAuth(usuario) {
     
   const senhaDecodificada = Buffer.from(usuario.senha, "base64").toString("utf-8");
   const senhaCorreta = await bcrypt.compare(senhaDecodificada, result.senha);
- 
+
   if (!senhaCorreta) {
     logger.warn(`Auth usuario - Usuário  ou senha inválidos.`);
     return { status: `erro`, code: 401, message: `Usuário  ou senha inválidos.` };

@@ -1704,3 +1704,42 @@
 2025-12-22T02:49:02.635Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
 2025-12-22T02:49:53.369Z [log_api] info API Backend iniciada com sucesso na porta 3000!
 2025-12-22T02:49:53.393Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-12-22T09:05:15.878Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-12-22T09:05:16.250Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-12-22T09:05:24.080Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-12-22T09:06:08.186Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-12-22T09:06:08.209Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-12-22T09:06:10.437Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-12-22T09:06:58.930Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-12-22T09:06:58.955Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-12-22T09:07:00.700Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-12-22T09:07:42.332Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-12-22T09:07:42.380Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-12-22T09:08:00.312Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-12-22T09:08:00.333Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-12-22T09:08:02.331Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-12-22T09:08:22.966Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-12-22T09:09:05.841Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-12-22T09:09:05.863Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-12-22T09:09:07.974Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-12-22T09:09:16.964Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-12-22T09:09:54.564Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-12-22T09:09:54.588Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-12-22T09:10:20.260Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-12-22T09:10:20.283Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-12-22T09:14:57.718Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-12-22T09:18:15.099Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-12-22T09:18:15.134Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-12-22T09:18:58.287Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-12-22T09:21:18.147Z [log_api] info POST /usuario - {"status":"sucesso","code":200,"message":"Usuário cadastrado com sucesso!"}
+2025-12-22T09:22:03.847Z [log_api] info GET /usuarios - [{"id":40,"nome":"eliezer","email":"eliezeroc@gmail.com","active":"S","data_criacao":"2025-02-16T04:28:18.000Z","data_alteracao":"2025-12-22T09:21:35.000Z","usuario":"eliezer.oliveira"},{"id":57,"nome":"Lucas Nascimento de Oliveira","email":"lucas@lucas.com","active":"S","data_criacao":"2025-12-22T09:21:18.000Z","data_alteracao":null,"usuario":"lucas.oliveira"}]
+2025-12-22T09:23:19.766Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-12-22T09:23:19.789Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-12-22T09:24:03.098Z [log_api] info GET /usuarios - [{"id":40,"nome":"eliezer","email":"eliezeroc@gmail.com","active":"S","data_criacao":"2025-02-16T04:28:18.000Z","data_alteracao":"2025-12-22T09:21:35.000Z","usuario":"eliezer.oliveira"},{"id":57,"nome":"Lucas Nascimento de Oliveira","email":"lucas@lucas.com","active":"S","data_criacao":"2025-12-22T09:21:18.000Z","data_alteracao":null,"usuario":"lucas.oliveira"}]
+2025-12-22T09:25:56.780Z [log_api] error E-mail lucas@lucas.com já cadastrado.
+2025-12-22T09:25:56.781Z [log_api] warn POST /usuario - {"status":"erro","code":409,"message":"E-mail já está em usu."}
+2025-12-22T09:26:05.758Z [log_api] info GET /usuarios - [{"id":40,"nome":"eliezer","email":"eliezeroc@gmail.com","active":"S","data_criacao":"2025-02-16T04:28:18.000Z","data_alteracao":"2025-12-22T09:24:53.000Z","usuario":"eliezer.oliveira"},{"id":57,"nome":"Lucas Nascimento de Oliveira","email":"lucas@lucas.com","active":"S","data_criacao":"2025-12-22T09:21:18.000Z","data_alteracao":null,"usuario":"lucas.oliveira"}]
+2025-12-22T09:28:02.168Z [log_api] info POST /usuario - {"status":"sucesso","code":200,"message":"Usuário cadastrado com sucesso!"}
+2025-12-22T09:37:29.829Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-12-22T09:37:29.849Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
+2025-12-22T09:37:37.649Z [log_api] info Token gerado com sucesso para o usuário admin.admin
