@@ -64,7 +64,7 @@ async function connect() {
       logger.error(`Erro inesperado: ${error.code}`);
     }
 
-    throw error; // Rethrow o erro caso precise lidar com ele em outros níveis
+    throw error; // retorna o erro caso precise lidar com ele em outros níveis
   }
 }
 
