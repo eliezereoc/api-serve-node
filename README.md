@@ -335,8 +335,8 @@ O projeto utiliza **Jest** para testes automatizados com suporte completo a ES M
 ### 📊 Status dos Testes
 
 ```
-Test Suites: 5 passed ✅
-Tests:       60 passed ✅
+Test Suites: 6 passed ✅
+Tests:       63 passed ✅
 Coverage:    56.32% do código
 ```
 
@@ -346,6 +346,7 @@ Coverage:    56.32% do código
 - **autorizacao.controller**: 100% ✅
 - **usuario.service**: 89.28% ✅
 - **usuario.controller**: 89.28% ✅
+- **rate limiter**: 100% ✅
 
 ### Executar Testes
 
@@ -376,6 +377,7 @@ npm test
 Os testes estão organizados próximo aos arquivos que testam:
 ```
 src/
+├── limiter.test.js
 ├── services/
 │   ├── auth.service.js
 │   ├── auth.service.test.js
@@ -436,6 +438,14 @@ src/
 - ✅ Validação de dados de entrada
 - ✅ Chamar middleware next() em exceções
 
+#### Rate Limiter (3 testes)
+- ✅ Permitir até 10 requisições e bloquear a 11ª
+- ✅ Retornar status 429 quando limite excedido
+- ✅ Aplicar rate limit globalmente na rota raiz
+- Proteção configurada para máximo de 10 requisições por segundo
+- Resposta automática com status 429 (Too Many Requests)
+- Previne ataques de força bruta e DDoS
+
 ### Exemplo de Teste
 
 ```javascript
@@ -462,6 +472,35 @@ describe('UsuarioService', () => {
     expect(result.status).toBe('sucesso');
     expect(result.code).toBe(200);
     expect(UsuarioRepository.createUsuario).toHaveBeenCalled();
+  });
+});
+```
+
+#### Teste de Rate Limiter
+
+```javascript
+describe('Rate Limiter Tests', () => {
+  it('deve permitir até 10 requisições e bloquear a 11ª', async () => {
+    const endpoint = '/';
+    let successCount = 0;
+    let blockedCount = 0;
+
+    // Faz 15 requisições para garantir que ultrapassamos o limite de 10
+    for (let i = 1; i <= 15; i++) {
+      const response = await request(app).get(endpoint);
+
+      if (response.status === 429) {
+        blockedCount++;
+      } else {
+        successCount++;
+      }
+    }
+
+    // Verifica que houve requisições bloqueadas
+    expect(blockedCount).toBeGreaterThan(0);
+    // Verifica que o bloqueio começou após aproximadamente 10 requisições
+    expect(successCount).toBeGreaterThanOrEqual(8);
+    expect(successCount).toBeLessThanOrEqual(10);
   });
 });
 ```
