@@ -288,9 +288,10 @@ npm install
 ```
 
 ### 3. Configurar variáveis de ambiente
-Renomeie o arquivo `env.txt` para `.env` e ajuste as configurações do banco de dados:
+
+Copy o arquivo `.env.example` para `.env` e ajuste as configurações do banco de dados:
 ```bash
-cp env.txt .env
+cp .env.example .env
 ```
 
 Configure as variáveis no arquivo `.env`:
@@ -300,7 +301,9 @@ Configure as variáveis no arquivo `.env`:
 - `PASSWORD_BD_STAGING` / `PASSWORD_BD_PRODUCTION`: Senha do banco
 - `DATABASE_NAME_STAGING` / `DATABASE_NAME_PRODUCTION`: Nome do banco
 - `NODE_ENV`: Ambiente (STAGING ou PRODUCTION)
-- `JWT_SECRET`: Chave secreta para JWT
+- `JWT_SECRET`: Chave secreta para JWT (gere uma nova em produção)
+
+**Nota**: O arquivo `env.txt` é um backup da configuração anterior. Use `.env.example` como referência.
 
 ### 4. Configurar o banco de dados
 Execute os scripts SQL localizados em `docs/` para criar o banco de dados:
