@@ -35,16 +35,38 @@ A API foi construída seguindo boas práticas:
 
 ## 📁 Estrutura do projeto
 
-/src
-│── controllers
-│── services
-│── repositories
-│── middlewares
-│── routes
-│── database
-├── .env.example
-├── server.js
-
+```
+api-serve-node/
+├── docs/
+│   ├── script.sql
+│   └── backupBd/
+│       ├── backup.sql
+│       └── db_api_dev.sql
+├── log/
+├── models/
+├── src/
+│   ├── controllers/
+│   │   ├── autorizacao.controller.js
+│   │   └── usuario.controller.js
+│   ├── repositories/
+│   │   ├── autorizacao.repository.js
+│   │   ├── db.js
+│   │   └── usuario.repository.js
+│   ├── routes/
+│   │   ├── autorizacao.route.js
+│   │   └── usuario.route.js
+│   ├── services/
+│   │   ├── auth.service.js
+│   │   ├── autorizacao.service.js
+│   │   └── usuario.service.js
+│   └── views/
+│       └── home.html
+├── env.txt
+├── index.js
+├── package.json
+├── README.md
+└── swagger.js
+```
 
 ---
 
