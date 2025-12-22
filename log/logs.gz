@@ -1702,3 +1702,5 @@
 2025-12-22T02:48:14.442Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
 2025-12-22T02:48:19.806Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
 2025-12-22T02:49:02.635Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2025-12-22T02:49:53.369Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2025-12-22T02:49:53.393Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
