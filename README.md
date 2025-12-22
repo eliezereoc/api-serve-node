@@ -81,3 +81,12 @@ Busca um usuário pelo ID.
 ### 1. Clonar o repositório
 ```bash
 git clone https://github.com/eliezereoc/api-serve-node
+
+
+npm install
+
+cp .env.example .env
+
+npm run dev
+
+http://localhost:3000
