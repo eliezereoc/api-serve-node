@@ -113,6 +113,168 @@ Remove um usuário pelo ID.
 
 ---
 
+## 💡 Casos de Uso
+
+### Caso 1: Autenticação de Usuário
+
+**Cenário**: Um usuário precisa se autenticar para obter um token JWT.
+
+```bash
+curl -X POST http://localhost:3000/api/v1/auth \
+  -H "Content-Type: application/json" \
+  -d '{
+    "usuario": "john.doe",
+    "senha": "YWRtaW4="
+  }'
+```
+
+**Resposta**:
+```json
+{
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+}
+```
+
+---
+
+### Caso 2: Criar um Novo Usuário
+
+**Cenário**: Um administrador autenticado deseja cadastrar um novo usuário no sistema.
+
+```bash
+curl -X POST http://localhost:3000/api/v1/usuario \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." \
+  -d '{
+    "nome": "Maria Silva",
+    "email": "maria.silva@email.com",
+    "senha": "c2VuaGFTZWd1cmE=",
+    "usuario": "maria.silva"
+  }'
+```
+
+**Resposta**:
+```json
+{
+  "status": "sucesso",
+  "message": "Usuário cadastrado com sucesso!"
+}
+```
+
+---
+
+### Caso 3: Listar Todos os Usuários
+
+**Cenário**: Um administrador deseja visualizar todos os usuários cadastrados.
+
+```bash
+curl -X GET http://localhost:3000/api/v1/usuario \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+```
+
+**Resposta**:
+```json
+[
+  {
+    "id": 1,
+    "nome": "John Doe",
+    "email": "johndoe@johndoe.com",
+    "data_criacao": "2024-09-12T03:00:00Z",
+    "data_alteracao": "2024-09-12T03:00:00Z"
+  },
+  {
+    "id": 2,
+    "nome": "Maria Silva",
+    "email": "maria.silva@email.com",
+    "data_criacao": "2024-09-15T10:30:00Z",
+    "data_alteracao": "2024-09-15T10:30:00Z"
+  }
+]
+```
+
+---
+
+### Caso 4: Buscar Usuário Específico
+
+**Cenário**: Buscar detalhes de um usuário pelo ID.
+
+```bash
+curl -X GET http://localhost:3000/api/v1/usuario/1 \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+```
+
+**Resposta**:
+```json
+{
+  "id": 1,
+  "nome": "John Doe",
+  "email": "johndoe@johndoe.com",
+  "usuario": "john.doe",
+  "data_criacao": "2024-09-12T03:00:00Z",
+  "data_alteracao": "2024-09-12T03:00:00Z"
+}
+```
+
+---
+
+### Caso 5: Atualizar Dados do Usuário
+
+**Cenário**: Atualizar informações de um usuário existente.
+
+```bash
+curl -X PUT http://localhost:3000/api/v1/usuario \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." \
+  -d '{
+    "usuario": "john.doe",
+    "nome": "John Doe Updated",
+    "email": "john.updated@email.com",
+    "senha": "bm92YVNlbmhh",
+    "active": "S"
+  }'
+```
+
+**Resposta**:
+```json
+{
+  "status": "sucesso",
+  "id": 1,
+  "affectedRows": 1,
+  "message": "Usuário atualizado com sucesso!"
+}
+```
+
+---
+
+### Caso 6: Remover Usuário
+
+**Cenário**: Remover um usuário do sistema.
+
+```bash
+curl -X DELETE http://localhost:3000/api/v1/usuario/1 \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+```
+
+**Resposta**:
+```json
+{
+  "id": 1,
+  "status": "sucesso",
+  "message": "Registro removido com sucesso!"
+}
+```
+
+---
+
+### Fluxo Completo de Uso
+
+1. **Autenticar** usando `POST /api/v1/auth` para obter o token JWT
+2. **Incluir o token** no header `Authorization: Bearer {token}` em todas as requisições protegidas
+3. **Realizar operações** de CRUD (Create, Read, Update, Delete) nos usuários
+4. O token JWT expira após um período definido - será necessário autenticar novamente
+
+---
+
 ## ⚙️ Como rodar o projeto
 
 ### 1. Clonar o repositório
