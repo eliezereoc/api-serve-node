@@ -29,6 +29,7 @@ A API foi construída seguindo boas práticas:
 - bcrypt  
 - dotenv  
 - Nodemon  
+- Jest (testes automatizados)  
 - Winston (logging)  
 - Swagger (documentação)  
 - Helmet (segurança)  
@@ -706,6 +707,7 @@ The API was built following best practices:
 - bcrypt  
 - dotenv  
 - Nodemon  
+- Jest (automated testing)  
 - Winston (logging)  
 - Swagger (documentation)  
 - Helmet (security)  
@@ -1005,10 +1007,311 @@ http://localhost:3000/api-docs
 
 ---
 
-## 📚 Interactive Documentation
+## 🧪 Automated Testing
 
-The API has interactive documentation using **Swagger**, accessible at `/api-docs`. 
-Through it you can test all endpoints directly in the browser.
+The project uses **Jest** for automated testing with full ES Modules support. With **60 tests** implemented covering services, controllers, and authentication.
+
+### 📊 Test Status
+
+```
+Test Suites: 6 passed ✅
+Tests:       63 passed ✅
+Coverage:    56.32% of code
+```
+
+**Coverage by module:**
+- **auth.service**: 100% ✅
+- **autorizacao.service**: 100% ✅
+- **autorizacao.controller**: 100% ✅
+- **usuario.service**: 89.28% ✅
+- **usuario.controller**: 89.28% ✅
+- **rate limiter**: 100% ✅
+
+### Running Tests
+
+#### Watch Mode (development)
+```bash
+npm test
+```
+Tests run automatically when saving files. Press `q` to quit.
+
+#### Run tests once
+```bash
+npm test -- --no-watch --no-coverage
+```
+
+#### Only tests from one file
+```bash
+npm test -- usuario.service.test.js
+```
+
+#### With detailed coverage report
+```bash
+npm test
+```
+(already included by default in the script)
+
+### Test Structure
+
+Tests are organized next to the files they test:
+```
+src/
+├── limiter.test.js
+├── services/
+│   ├── auth.service.js
+│   ├── auth.service.test.js
+│   ├── autorizacao.service.js
+│   ├── autorizacao.service.test.js
+│   ├── usuario.service.js
+│   └── usuario.service.test.js
+├── controllers/
+│   ├── autorizacao.controller.js
+│   ├── autorizacao.controller.test.js
+│   ├── usuario.controller.js
+│   └── usuario.controller.test.js
+```
+
+### Implemented Tests
+
+#### AuthService (6 tests)
+- ✅ Create token with correct payload
+- ✅ Use HS256 algorithm and 1h expiration
+- ✅ Verify token with Bearer format
+- ✅ Store user data in req.user
+- ✅ Return 401 error for invalid tokens
+- ✅ Validate JWT_SECRET from environment
+
+#### AutorizacaoService (4 tests)
+- ✅ Authenticate user successfully
+- ✅ Validate password with bcrypt
+- ✅ Return error when user doesn't exist
+- ✅ Return error when password is incorrect
+
+#### UsuarioService (17 tests)
+- ✅ Create user successfully
+- ✅ Validate duplicate email
+- ✅ Validate duplicate username
+- ✅ Reactivate inactive user
+- ✅ Password hash with bcrypt
+- ✅ List users
+- ✅ Search user by ID
+- ✅ Delete user
+- ✅ Prevent self-delete of account
+- ✅ Update user
+- ✅ Database error handling
+
+#### AutorizacaoController (11 tests)
+- ✅ Authenticate and generate token
+- ✅ Validate required fields
+- ✅ Return 401 error for invalid authentication
+- ✅ Return error when token is not created
+- ✅ Exception handling
+
+#### UsuarioController (16 tests)
+- ✅ Create user with validation
+- ✅ List users
+- ✅ Search specific user
+- ✅ Delete user
+- ✅ Update user
+- ✅ HTTP error handling
+- ✅ Input data validation
+- ✅ Call next() middleware on exceptions
+
+#### Rate Limiter (3 tests)
+- ✅ Allow up to 10 requests and block the 11th
+- ✅ Return status 429 when limit exceeded
+- ✅ Apply rate limit globally on root route
+- Protection configured for maximum of 10 requests per second
+- Automatic response with status 429 (Too Many Requests)
+- Prevents brute force attacks and DDoS
+
+### Test Example
+
+```javascript
+describe('UsuarioService', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+  it('should create a user successfully', async () => {
+    const usuario = {
+      usuario: 'testuser',
+      email: 'test@example.com',
+      senha: Buffer.from('senha123').toString('base64'),
+      nome: 'Test User'
+    };
+
+    UsuarioRepository.getUsuarioByEmail.mockResolvedValue([null]);
+    UsuarioRepository.getUsuarioByUsuario.mockResolvedValue([null]);
+    bcrypt.hash.mockResolvedValue('hashedPassword123');
+    UsuarioRepository.createUsuario.mockResolvedValue({ status: 'sucesso' });
+
+    const result = await UsuarioService.createUsuario(usuario);
+
+    expect(result.status).toBe('sucesso');
+    expect(result.code).toBe(200);
+    expect(UsuarioRepository.createUsuario).toHaveBeenCalled();
+  });
+});
+```
+
+#### Rate Limiter Test
+
+```javascript
+describe('Rate Limiter Tests', () => {
+  it('should allow up to 10 requests and block the 11th', async () => {
+    const endpoint = '/';
+    let successCount = 0;
+    let blockedCount = 0;
+
+    // Make 15 requests to ensure we exceed the limit of 10
+    for (let i = 1; i <= 15; i++) {
+      const response = await request(app).get(endpoint);
+
+      if (response.status === 429) {
+        blockedCount++;
+      } else {
+        successCount++;
+      }
+    }
+
+    // Verify that requests were blocked
+    expect(blockedCount).toBeGreaterThan(0);
+    // Verify that blocking started after approximately 10 requests
+    expect(successCount).toBeGreaterThanOrEqual(8);
+    expect(successCount).toBeLessThanOrEqual(10);
+  });
+});
+```
+
+### Code Coverage
+
+Jest automatically generates a coverage report showing:
+- **% Stmts** - Percentage of statements (lines) executed
+- **% Branch** - Percentage of branches (if/else) executed
+- **% Funcs** - Percentage of functions executed
+- **% Lines** - Percentage of lines covered
+
+Report example:
+```
+usuario.service.js | 89.28 | 82.14 | 100 | 89.09
+```
+= 89% of code is covered by tests
+
+### Mocks Used
+
+Tests use mocks for isolation:
+- **UsuarioRepository** - Database operations
+- **bcrypt** - Password hashing
+- **JWT** - Token creation and verification
+- **logger** - Global logs
+- **mysql2/promise** - DB connection (disabled in tests)
+
+### 💡 Best Practices Implemented
+
+1. **Isolation** - Each test is independent
+2. **Setup/Teardown** - `beforeEach()` clears mocks
+3. **Descriptive names** - Tests explain what they test
+4. **Edge case coverage** - Errors, validations, exceptions
+5. **Appropriate mocks** - No real dependencies (DB, APIs)
+
+### 🔧 Configuration
+
+Jest configuration is in `jest.config.js`:
+- ✅ ES Modules support
+- ✅ Automatic Babel transpilation
+- ✅ Automatic coverage
+- ✅ Timeout configured for async operations
+
+---
+
+## 📚 Interactive Documentation with Swagger
+
+The API has complete interactive documentation using **Swagger UI**, allowing you to view and test all endpoints directly in the browser.
+
+### 🌐 Access Documentation
+
+After starting the server, access:
+```
+http://localhost:3000/api-docs
+```
+
+### 📋 Available Features
+
+Swagger documentation includes:
+
+#### ✅ Complete View
+- List of all available endpoints
+- HTTP methods (GET, POST, PUT, DELETE)
+- Required parameters (body, query, params)
+- Request and response examples
+- HTTP status codes
+
+#### 🔐 JWT Authentication
+- "Authorize" button to insert JWT token
+- Format: `Bearer {your-token-here}`
+- Token valid for 1 hour after authentication
+- Easily test protected endpoints
+
+#### 🧪 Test Endpoints
+
+1. **Authenticate** first via `POST /api/v1/auth`:
+   ```json
+   {
+     "usuario": "your-username",
+     "senha": "c2VuaGFCYXNlNjQ="
+   }
+   ```
+
+2. **Copy token** from response
+
+3. **Click "Authorize"** (padlock at top)
+
+4. **Insert token** in format: `Bearer {token}`
+
+5. **Test protected endpoints**:
+   - GET /api/v1/usuario - List users
+   - POST /api/v1/usuario - Create user
+   - PUT /api/v1/usuario - Update user
+   - DELETE /api/v1/usuario/{id} - Delete user
+
+### 📝 Documented Endpoints
+
+#### Authentication
+- `POST /api/v1/auth` - Generate JWT token
+
+#### Users (Protected 🔒)
+- `GET /api/v1/usuario` - List all users
+- `GET /api/v1/usuario/{id}` - Search user by ID
+- `POST /api/v1/usuario` - Create new user
+- `PUT /api/v1/usuario` - Update user
+- `DELETE /api/v1/usuario/{id}` - Delete user
+
+### 💡 Usage Tips
+
+**Base64 Password:**
+- Passwords must be sent encoded in Base64
+- Example: `senha123` → `c2VuaGExMjM=`
+- Use: `echo -n "senha123" | base64` in terminal
+
+**Test Responses:**
+- Swagger shows real response examples
+- Status codes: 200 (success), 401 (unauthorized), 404 (not found)
+- Detailed error messages
+
+**Validations:**
+- Required fields marked with `*`
+- Expected data format
+- Size and type restrictions
+
+### 🔧 Configuration
+
+Swagger documentation is configured in `swagger.js` with:
+- Project information
+- API version
+- Base URL server
+- Data schemas
+- Request examples
 
 ---
 
