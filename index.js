@@ -5,6 +5,7 @@ import bodyParser from "body-parser";
 import path from "path";
 import winston from "winston";
 import dotenv from "dotenv/config";
+import rateLimit from "express-rate-limit";
 import setupSwagger from './swagger.js';
 import usuarioRoutes from "./src/routes/usuario.route.js";
 import autorizacaoRoutes from "./src/routes/autorizacao.route.js";
