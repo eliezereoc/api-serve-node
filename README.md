@@ -7,6 +7,26 @@
 
 REST API com autenticação JWT, MySQL e arquitetura organizada para aplicações escaláveis.
 
+---
+
+## ✅ Pré-requisitos
+
+Antes de começar, certifique-se de ter instalado:
+
+- **Node.js** (versão 18 ou superior) - [Download](https://nodejs.org/)
+- **npm** (geralmente incluído com Node.js)
+- **MySQL** (versão 5.7 ou superior) - [Download](https://www.mysql.com/downloads/)
+- **Git** (opcional, para controle de versão) - [Download](https://git-scm.com/)
+
+Para verificar se estão instalados, execute:
+```bash
+node --version
+npm --version
+mysql --version
+```
+
+---
+
 ## 🇧🇷 Sobre o projeto
 
 Esta é uma **API REST completa**, desenvolvida em **Node.js** com **autenticação JWT**, validação, conexão com banco de dados **MySQL** e uma arquitetura organizada, pronta para uso em sistemas reais.
@@ -809,6 +829,67 @@ Os logs são salvos na pasta `log/` conforme configuração no arquivo `.env`.
 
 ---
 
+## 🤝 Como Contribuir
+
+Contribuições são bem-vindas! Para contribuir com este projeto:
+
+1. **Fork o repositório**
+   ```bash
+   git clone https://github.com/seu-usuario/api-serve-node.git
+   ```
+
+2. **Crie uma branch para sua feature**
+   ```bash
+   git checkout -b feature/sua-feature
+   ```
+
+3. **Commit suas mudanças**
+   ```bash
+   git commit -m 'Adiciona sua feature'
+   ```
+
+4. **Push para a branch**
+   ```bash
+   git push origin feature/sua-feature
+   ```
+
+5. **Abra um Pull Request**
+
+### Diretrizes para Contribuição
+
+- Siga o código existente (ESLint)
+- Escreva testes para novas funcionalidades
+- Mantenha a cobertura de testes acima de 80%
+- Atualize a documentação conforme necessário
+- Use commits semânticos (feat:, fix:, docs:, etc.)
+
+---
+
+## 🛣️ Roadmap
+
+Planos futuros para o projeto:
+
+### Curto Prazo (v1.1.0)
+- [ ] Adicionar suporte a OAuth2
+- [ ] Implementar refresh tokens
+- [ ] Adicionar validação de email
+- [ ] Melhorar cobertura de testes para 90%
+
+### Médio Prazo (v1.2.0)
+- [ ] Implementar 2FA (autenticação de dois fatores)
+- [ ] Adicionar endpoints de permissões e roles
+- [ ] Implementar soft delete para usuários
+- [ ] Adicionar paginação avançada
+
+### Longo Prazo (v2.0.0)
+- [ ] Migrar para TypeScript
+- [ ] Adicionar GraphQL como alternativa REST
+- [ ] Implementar websockets para notificações em tempo real
+- [ ] Adicionar cache com Redis
+- [ ] Implementar auditoria completa
+
+---
+
 ## 👤 Autor
 
 **Eliezer de Oliveira**
@@ -825,6 +906,26 @@ ISC
 
 # 🇺🇸 Node.js API Server  
 REST API with JWT authentication, MySQL and organized architecture for scalable applications.
+
+---
+
+## ✅ Prerequisites
+
+Before you start, make sure you have installed:
+
+- **Node.js** (version 18 or higher) - [Download](https://nodejs.org/)
+- **npm** (usually included with Node.js)
+- **MySQL** (version 5.7 or higher) - [Download](https://www.mysql.com/downloads/)
+- **Git** (optional, for version control) - [Download](https://git-scm.com/)
+
+To verify they are installed, run:
+```bash
+node --version
+npm --version
+mysql --version
+```
+
+---
 
 ## 🇺🇸 About the project
 
@@ -1691,10 +1792,66 @@ The API was built following best practices:
 
 ---
 
-## 📝 Logs
+---
 
-The system uses **Winston** for log management.  
-Logs are saved in the `log/` folder according to the configuration in the `.env` file.
+## 🤝 How to Contribute
+
+Contributions are welcome! To contribute to this project:
+
+1. **Fork the repository**
+   ```bash
+   git clone https://github.com/your-username/api-serve-node.git
+   ```
+
+2. **Create a branch for your feature**
+   ```bash
+   git checkout -b feature/your-feature
+   ```
+
+3. **Commit your changes**
+   ```bash
+   git commit -m 'Add your feature'
+   ```
+
+4. **Push to the branch**
+   ```bash
+   git push origin feature/your-feature
+   ```
+
+5. **Open a Pull Request**
+
+### Contribution Guidelines
+
+- Follow existing code style (ESLint)
+- Write tests for new features
+- Keep test coverage above 80%
+- Update documentation as needed
+- Use semantic commits (feat:, fix:, docs:, etc.)
+
+---
+
+## 🛣️ Roadmap
+
+Future plans for the project:
+
+### Short Term (v1.1.0)
+- [ ] Add OAuth2 support
+- [ ] Implement refresh tokens
+- [ ] Add email validation
+- [ ] Improve test coverage to 90%
+
+### Mid Term (v1.2.0)
+- [ ] Implement 2FA (two-factor authentication)
+- [ ] Add permissions and roles endpoints
+- [ ] Implement soft delete for users
+- [ ] Add advanced pagination
+
+### Long Term (v2.0.0)
+- [ ] Migrate to TypeScript
+- [ ] Add GraphQL as REST alternative
+- [ ] Implement websockets for real-time notifications
+- [ ] Add cache with Redis
+- [ ] Implement complete audit trail
 
 ---
 
