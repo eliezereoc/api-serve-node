@@ -1,4 +1,10 @@
-# API Server Node.js  
+# API Server Node.js
+
+[![Node.js](https://img.shields.io/badge/Node.js-18+-green?logo=node.js)](https://nodejs.org/)
+[![License](https://img.shields.io/badge/License-ISC-blue)](LICENSE)
+[![Tests](https://img.shields.io/badge/Tests-Jest-brightgreen?logo=jest)](package.json)
+[![Coverage](https://img.shields.io/badge/Coverage-Available-brightgreen)](coverage/)
+
 REST API com autenticação JWT, MySQL e arquitetura organizada para aplicações escaláveis.
 
 ## 🇧🇷 Sobre o projeto
