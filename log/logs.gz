@@ -1754,3 +1754,10 @@
 2025-12-22T14:03:47.877Z [log_api] info Token gerado com sucesso para o usuário admin.admin
 2026-03-24T09:23:09.127Z [log_api] info API Backend iniciada com sucesso na porta 3000!
 2026-03-24T09:23:54.957Z [log_api] info Token gerado com sucesso para o usuário admin.admin
+2026-03-24T09:43:59.742Z [log_api] info API Backend tentando conectar no banco com a configuracao: {"nodeEnvInformado":"PRODUCTION","ambienteResolvido":"PRODUCTION","host":"localhost","port":"3306","usuario":"root","banco":"db_api","senha":"939484"}
+2026-03-24T09:43:59.846Z [log_api] info API Backend conectado no banco de PRODUCTION!
+2026-03-24T09:43:59.850Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2026-03-24T09:44:51.618Z [log_api] info API Backend tentando conectar no banco com a configuracao: {"nodeEnvInformado":"PRODUCTION","ambienteResolvido":"PRODUCTION","host":"localhost","port":"3306","usuario":"root","banco":"db_api_prod","senha":""}
+2026-03-24T09:45:31.252Z [log_api] info API Backend tentando conectar no banco com a configuracao: {"nodeEnvInformado":"STAGING","ambienteResolvido":"STAGING","host":"localhost","port":"3306","usuario":"root","banco":"db_api_dev","senha":"939484"}
+2026-03-24T09:45:31.289Z [log_api] info API Backend conectado no banco de STAGING!
+2026-03-24T09:45:31.292Z [log_api] info API Backend iniciada com sucesso na porta 3000!
