@@ -1,8 +1,46 @@
 import mysql from "mysql2/promise";
 import dotenv from "dotenv/config";
 
+function getLogger() {
+  return global.logger ?? console;
+}
+
+function resolveDatabaseEnvironment() {
+  const rawNodeEnv = (process.env.NODE_ENV ?? "").trim();
+  const normalizedNodeEnv = rawNodeEnv.toUpperCase();
+
+  if (["PRODUCTION", "PROD"].includes(normalizedNodeEnv)) {
+    return {
+      raw: rawNodeEnv,
+      normalized: "PRODUCTION",
+      isProduction: true,
+    };
+  }
+
+  if (
+    ["STAGING", "HOMOLOGACAO", "HOMOLOGATION", "DEVELOPMENT", "DEV", ""].includes(
+      normalizedNodeEnv
+    )
+  ) {
+    return {
+      raw: rawNodeEnv,
+      normalized: "STAGING",
+      isProduction: false,
+    };
+  }
+
+  return {
+    raw: rawNodeEnv,
+    normalized: "STAGING",
+    isProduction: false,
+    fallback: true,
+  };
+}
+
 async function connect() {
-  // Skip conexão real durante testes
+  const logger = getLogger();
+
+  // Skip conexao real durante testes
   if (process.env.NODE_ENV === "test") {
     return {
       execute: jest.fn().mockResolvedValue([[], []]),
@@ -14,34 +52,49 @@ async function connect() {
   if (global.connection && global.connection.state !== "disconnected")
     return global.connection;
 
-  // Verifica o ambiente (STAGING ou PRODUCTION)
-  const isProduction = process.env.NODE_ENV === "PRODUCTION";
+  const environment = resolveDatabaseEnvironment();
 
-  // Configurações de banco para STAGING e PRODUCTION
+  // Configuracoes de banco para STAGING e PRODUCTION
   const config = {
-    host: isProduction
+    host: environment.isProduction
       ? process.env.HOST_BD_PRODUCTION
       : process.env.HOST_BD_STAGING,
-    port: isProduction
+    port: environment.isProduction
       ? process.env.PORT_BD_PRODUCTION
       : process.env.PORT_BD_STAGING,
-    user: isProduction
+    user: environment.isProduction
       ? process.env.USER_BD_PRODUCTION
       : process.env.USER_BD_STAGING,
-    password: isProduction
+    password: environment.isProduction
       ? process.env.PASSWORD_BD_PRODUCTION
       : process.env.PASSWORD_BD_STAGING,
-    database: isProduction
+    database: environment.isProduction
       ? process.env.DATABASE_NAME_PRODUCTION
       : process.env.DATABASE_NAME_STAGING,
   };
 
   try {
+    if (environment.fallback) {
+      logger.warn(
+        `${process.env.APP_NAME} recebeu NODE_ENV='${environment.raw}' e aplicou fallback para STAGING.`
+      );
+    }
+
+    logger.info(
+      `${process.env.APP_NAME} tentando conectar no banco com a configuracao: ${JSON.stringify({
+        nodeEnvInformado: environment.raw,
+        ambienteResolvido: environment.normalized,
+        host: config.host,
+        port: config.port,
+        usuario: config.user,
+        banco: config.database,
+        senha: config.password,
+      })}`
+    );
+
     const connection = await mysql.createConnection(config);
     logger.info(
-      `${process.env.APP_NAME} conectado no banco de  ${
-        isProduction ? "PRODUÇÃO" : "HOMOLOGAÇÃO"
-      }!`
+      `${process.env.APP_NAME} conectado no banco de ${environment.normalized}!`
     );
     global.connection = connection;
     return connection;
@@ -50,21 +103,21 @@ async function connect() {
 
     if (error.code === "ECONNREFUSED") {
       logger.error(
-        "Conexão recusada. Verifique se o serviço MySQL está ativo e as credenciais estão corretas."
+        "Conexao recusada. Verifique se o servico MySQL esta ativo e as credenciais estao corretas."
       );
     } else if (error.code === "ER_ACCESS_DENIED_ERROR") {
       logger.error(
-        "Acesso negado. Verifique o usuário e a senha do banco de dados."
+        "Acesso negado. Verifique o usuario e a senha do banco de dados."
       );
     } else if (error.code === "ENOTFOUND") {
       logger.error(
-        "Servidor do banco de dados não encontrado. Verifique o host configurado."
+        "Servidor do banco de dados nao encontrado. Verifique o host configurado."
       );
     } else {
       logger.error(`Erro inesperado: ${error.code}`);
     }
 
-    throw error; // retorna o erro caso precise lidar com ele em outros níveis
+    throw error;
   }
 }
 

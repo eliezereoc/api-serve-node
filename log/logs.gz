@@ -1752,3 +1752,5 @@
 2025-12-22T14:03:10.360Z [log_api] info API Backend iniciada com sucesso na porta 3000!
 2025-12-22T14:03:10.387Z [log_api] info API Backend conectado no banco de  HOMOLOGAÇÃO!
 2025-12-22T14:03:47.877Z [log_api] info Token gerado com sucesso para o usuário admin.admin
+2026-03-24T09:23:09.127Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2026-03-24T09:23:54.957Z [log_api] info Token gerado com sucesso para o usuário admin.admin

@@ -105,4 +105,7 @@ dist
 docs/Requisitos/*.sql
 docs/Requisitos/*.docx
 
- 
+logs/
+log/
+*.log   
+

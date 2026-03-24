@@ -349,7 +349,7 @@ npm run migrate:production
 
 As migrations criam automaticamente:
 - Tabela `usuario` com todos os campos necessários
-- Usuário admin padrão (usuário: `admin.admin`, senha: `admin`)
+- Usuário admin padrão (usuário: `admin.admin`, senha: `adminadmin`)
 - Índices e constraints
 
 **Opção B: Usando scripts SQL manuais**
