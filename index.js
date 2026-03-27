@@ -67,12 +67,20 @@ app.use((err, req, res, next) => {
 
 // Inicia o servidor apenas se não estiver sendo importado (ex: em testes)
 if (process.env.NODE_ENV !== 'test') {
-  await db();
-  app.listen(process.env.PORT_LISTEN, () => {
-    logger.info(
-      `${process.env.APP_NAME} iniciada com sucesso na porta ${process.env.PORT_LISTEN}!`
-    );
-  });
+  try {
+    await db();
+
+    const PORT = process.env.PORT || 3000;
+
+    app.listen(PORT, () => {
+      logger.info(
+        `${process.env.APP_NAME} iniciada com sucesso na porta ${PORT}!`
+      );
+    });
+  } catch (err) {
+    logger.error('Erro ao iniciar aplicação:', err);
+    process.exit(1);
+  }
 }
 
 export default app;

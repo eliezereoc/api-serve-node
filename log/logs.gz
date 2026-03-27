@@ -1761,3 +1761,7 @@
 2026-03-24T09:45:31.252Z [log_api] info API Backend tentando conectar no banco com a configuracao: {"nodeEnvInformado":"STAGING","ambienteResolvido":"STAGING","host":"localhost","port":"3306","usuario":"root","banco":"db_api_dev","senha":"939484"}
 2026-03-24T09:45:31.289Z [log_api] info API Backend conectado no banco de STAGING!
 2026-03-24T09:45:31.292Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2026-03-27T09:24:53.112Z [log_api] info API Backend tentando conectar no banco com a configuracao: {"nodeEnvInformado":"STAGING","ambienteResolvido":"STAGING","host":"localhost","port":"3306","usuario":"root","banco":"db_api_dev","senha":"939484"}
+2026-03-27T09:24:53.477Z [log_api] info API Backend conectado no banco de STAGING!
+2026-03-27T09:24:53.481Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2026-03-27T09:25:47.771Z [log_api] info Token gerado com sucesso para o usuário admin.admin
