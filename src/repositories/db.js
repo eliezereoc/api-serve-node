@@ -49,9 +49,6 @@ async function connect() {
     };
   }
 
-  if (global.connection && global.connection.state !== "disconnected")
-    return global.connection;
-
   const environment = resolveDatabaseEnvironment();
 
   // Configuracoes de banco para STAGING e PRODUCTION
@@ -71,6 +68,9 @@ async function connect() {
     database: environment.isProduction
       ? process.env.DATABASE_NAME_PRODUCTION
       : process.env.DATABASE_NAME_STAGING,
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0,
   };
 
   try {
@@ -92,7 +92,27 @@ async function connect() {
       })}`
     );
 
-    const connection = await mysql.createConnection(config);
+    if (global.connection) {
+      try {
+        await global.connection.query("SELECT 1");
+        return global.connection;
+      } catch (healthCheckError) {
+        logger.warn(
+          `${process.env.APP_NAME} detectou conexao encerrada e vai recriar o pool. Detalhe: ${healthCheckError.message}`
+        );
+        try {
+          await global.connection.end();
+        } catch (closeError) {
+          logger.warn(
+            `${process.env.APP_NAME} nao conseguiu encerrar a conexao anterior: ${closeError.message}`
+          );
+        }
+        global.connection = null;
+      }
+    }
+
+    const connection = mysql.createPool(config);
+    await connection.query("SELECT 1");
     logger.info(
       `${process.env.APP_NAME} conectado no banco de ${environment.normalized}!`
     );
@@ -120,7 +140,5 @@ async function connect() {
     throw error;
   }
 }
-
-connect();
 
 export default connect;

@@ -21,9 +21,17 @@ async function verificaUsuario(req, res, next) {
     return res.status(401).send({ message: "Falha na autenticação: token não encontrado"});
   } catch (error) {
     logger.error(
-      `${process.env.APP_NAME} - Erro - ${error}`
+      `${process.env.APP_NAME} - Erro - ${JSON.stringify({
+        status: error?.status ?? 500,
+        message: error?.message ?? "Erro interno",
+        detail: error?.error ?? null,
+        stack: error?.stack ?? null,
+      })}`
     );
-    return res.status(500).send({ message: `${error}`});
+    return res.status(error?.status || 500).send({
+      message: error?.message || "Erro interno",
+      detail: error?.error || null,
+    });
   }
 }
 
