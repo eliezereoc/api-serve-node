@@ -134,7 +134,7 @@ Busca um usuário específico pelo ID.
 
 #### **PUT /api/v1/usuario**
 Atualiza as informações de um usuário.
-- **Body**: `{ "usuario": "john.doe", "nome": "John Doe", "email": "johndoe@johndoe.com", "senha": "novaSenha123", "active": "S" }`
+- **Body**: `{ "usuario": "john.doe", "nome": "John Doe", "email": "johndoe@johndoe.com", "senha": "bm92YVNlbmhhMTIz", "active": "S" }`
 
 #### **DELETE /api/v1/usuario/:id**
 Remove um usuário pelo ID.
@@ -1034,7 +1034,7 @@ Searches for a specific user by ID.
 
 #### **PUT /api/v1/usuario**
 Updates user information.
-- **Body**: `{ "usuario": "john.doe", "nome": "John Doe", "email": "johndoe@johndoe.com", "senha": "novaSenha123", "active": "S" }`
+- **Body**: `{ "usuario": "john.doe", "nome": "John Doe", "email": "johndoe@johndoe.com", "senha": "bm92YVNlbmhhMTIz", "active": "S" }`
 
 #### **DELETE /api/v1/usuario/:id**
 Removes a user by ID.
