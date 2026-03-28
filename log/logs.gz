@@ -1770,3 +1770,20 @@
 2026-03-28T15:20:40.078Z [log_api] info API Backend iniciada com sucesso na porta 3000!
 2026-03-28T15:21:35.889Z [log_api] info API Backend tentando conectar no banco com a configuracao: {"nodeEnvInformado":"STAGING","ambienteResolvido":"STAGING","host":"localhost","port":"3306","usuario":"root","banco":"db_api_dev","senha":"939484"}
 2026-03-28T15:21:36.068Z [log_api] info Token gerado com sucesso para o usuário admin.admin
+2026-03-28T17:19:47.069Z [log_api] info API Backend tentando conectar no banco com a configuracao: {"nodeEnvInformado":"STAGING","ambienteResolvido":"STAGING","host":"localhost","port":"3306","usuario":"root","banco":"db_api_dev","senha":"939484"}
+2026-03-28T17:19:47.257Z [log_api] info API Backend conectado no banco de STAGING!
+2026-03-28T17:19:47.261Z [log_api] info API Backend iniciada com sucesso na porta 3000!
+2026-03-28T17:21:25.554Z [log_api] info API Backend tentando conectar no banco com a configuracao: {"nodeEnvInformado":"STAGING","ambienteResolvido":"STAGING","host":"localhost","port":"3306","usuario":"root","banco":"db_api_dev","senha":"939484"}
+2026-03-28T17:21:25.703Z [log_api] info Token gerado com sucesso para o usuário admin.admin
+2026-03-28T17:21:56.976Z [log_api] info API Backend tentando conectar no banco com a configuracao: {"nodeEnvInformado":"STAGING","ambienteResolvido":"STAGING","host":"localhost","port":"3306","usuario":"root","banco":"db_api_dev","senha":"939484"}
+2026-03-28T17:21:56.987Z [log_api] info GET /usuarios - [{"id":61,"nome":"Admin","email":"admin@admin.com","active":"S","data_criacao":"2025-12-22T14:02:45.000Z","data_alteracao":null,"usuario":"admin.admin"}]
+2026-03-28T17:25:07.618Z [log_api] info API Backend tentando conectar no banco com a configuracao: {"nodeEnvInformado":"STAGING","ambienteResolvido":"STAGING","host":"localhost","port":"3306","usuario":"root","banco":"db_api_dev","senha":"939484"}
+2026-03-28T17:25:07.648Z [log_api] info API Backend tentando conectar no banco com a configuracao: {"nodeEnvInformado":"STAGING","ambienteResolvido":"STAGING","host":"localhost","port":"3306","usuario":"root","banco":"db_api_dev","senha":"939484"}
+2026-03-28T17:25:07.721Z [log_api] info API Backend tentando conectar no banco com a configuracao: {"nodeEnvInformado":"STAGING","ambienteResolvido":"STAGING","host":"localhost","port":"3306","usuario":"root","banco":"db_api_dev","senha":"939484"}
+2026-03-28T17:25:07.788Z [log_api] info POST /usuario - {"status":"sucesso","code":200,"message":"Usuário cadastrado com sucesso!"}
+2026-03-28T17:25:14.848Z [log_api] info API Backend tentando conectar no banco com a configuracao: {"nodeEnvInformado":"STAGING","ambienteResolvido":"STAGING","host":"localhost","port":"3306","usuario":"root","banco":"db_api_dev","senha":"939484"}
+2026-03-28T17:25:14.852Z [log_api] info GET /usuarios - [{"id":61,"nome":"Admin","email":"admin@admin.com","active":"S","data_criacao":"2025-12-22T14:02:45.000Z","data_alteracao":null,"usuario":"admin.admin"},{"id":62,"nome":"Eliézer de Oliveira","email":"eliezeroc@gmail.com","active":"S","data_criacao":"2026-03-28T17:25:07.000Z","data_alteracao":null,"usuario":"eliezer.oliveira"}]
+2026-03-28T17:26:05.294Z [log_api] info API Backend tentando conectar no banco com a configuracao: {"nodeEnvInformado":"STAGING","ambienteResolvido":"STAGING","host":"localhost","port":"3306","usuario":"root","banco":"db_api_dev","senha":"939484"}
+2026-03-28T17:26:05.352Z [log_api] warn Auth usuario - Usuário  ou senha inválidos.
+2026-03-28T17:26:18.028Z [log_api] info API Backend tentando conectar no banco com a configuracao: {"nodeEnvInformado":"STAGING","ambienteResolvido":"STAGING","host":"localhost","port":"3306","usuario":"root","banco":"db_api_dev","senha":"939484"}
+2026-03-28T17:26:18.089Z [log_api] info Token gerado com sucesso para o usuário eliezer.oliveira
